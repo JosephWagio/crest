@@ -19,6 +19,10 @@ ul, li, a{
     overflow-x: hidden;
 }
 
+.span {
+    color: var(--color-golden);
+}
+
 .button {
     background-color: var(--color-golden);
     color: var(--color-black);

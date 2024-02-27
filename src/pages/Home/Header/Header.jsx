@@ -14,7 +14,7 @@ import './Header.css';
 
 const Header = () => {
   const bounceTransition = {
-    y: {
+    x: {
       duration: 4,
       repeat: Infinity,
       repeatType: 'reverse',
@@ -26,12 +26,12 @@ const Header = () => {
     <div className='header section__padding'>
       <div className="header-content">
         <div className="header-text">
-          <h1>Empowering Your Financial <br /> Future with <span style={{color: "#FFD700"}}>Cryptocurrency</span> </h1>
-          <p>At Crest Holdings LTD, we believe in democratizing access to the world of <span style={{color: "#FFD700"}}>Cryptocurrency</span> and blockchain technology. Join us on our journey to reshape the future of finance.</p>
+          <h1>Empowering Your Financial <br /> Future with <span className='span'>Cryptocurrency</span> </h1>
+          <p>At Crest Holdings LTD, we believe in democratizing access to the world of <span className='span'>Cryptocurrency</span> and blockchain technology. Join us on our journey to reshape the future of finance.</p>
           <button className='button'><Link to="/">Get Started</Link></button>
         </div>
         <div className='header-img'>
-          <motion.div className="header-image" transition={bounceTransition} animate={{ y: [10, -10, 10]}} >
+          <motion.div transition={bounceTransition} animate={{ x: [10, -10, 10]}} >
             <img src={HeaderImg} alt="header" />
           </motion.div>
         </div>

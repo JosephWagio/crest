@@ -6,6 +6,7 @@ import Footer from "./components/common/Footer/Footer"
 import Home from "./pages/Home/Home"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import Service from "./pages/Service/Services";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" exact element={<Home/>}/>
+          <Route path="/Service" exact element={<Service/>}/>
           <Route path="/signup" exact element={<Register/>}/>
           <Route path="/signin" exact element={<Login/>}/>
         </Routes>

@@ -30,7 +30,7 @@
 
 .header-text p {
     font-family: var(--font-family);
-    color: var(--color-white);
+    color: var(--color-crimson);
     font-size: 15px;
     font-weight: 500;
     line-height: 23px;
@@ -138,7 +138,7 @@
     .crypto img {
         width: 30px;
     }
-    .header-img {
+    /* .header-img {
         display: none;
-    }
+    } */
 }
