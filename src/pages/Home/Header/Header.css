@@ -129,13 +129,16 @@
         margin-left: 4rem;
     }
     .header-crypto {
-        padding: 10px 30px;
+        padding: 15px 40px;
+        margin-top: 2rem;
     }
     .crypto {
         margin: 0 .5rem;
     }
     .crypto img {
-        width: 20px;
+        width: 30px;
     }
-
+    .header-img {
+        display: none;
+    }
 }
