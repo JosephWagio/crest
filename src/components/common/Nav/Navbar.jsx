@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { HiOutlineMenu} from 'react-icons/hi';
+import { MdOutlineMenu } from "react-icons/md";
 import { IoCloseOutline } from 'react-icons/io5';
 
 import Logo from '../../../assets/Logo.png'
@@ -34,7 +34,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-menu">
-        <HiOutlineMenu color='#FFD700' fontSize={35} onClick={() => setToggleMenu(true)} />
+        <MdOutlineMenu color='#FFD700' fontSize={35} onClick={() => setToggleMenu(true)} />
 
         {toggleMenu && (
           <div className="navbar-menu_container scale-up-center">

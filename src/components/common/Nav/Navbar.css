@@ -172,6 +172,10 @@ ul li {
     .navbar-menu-links li {
         font-size: 1.5rem;
     }
+    .navbar-links_logo img {
+        height: 100px;
+        width: 120px;
+    }
 }
 
 @media screen and (max-width: 430px) {
