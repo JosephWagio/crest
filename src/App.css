@@ -9,6 +9,72 @@ body{
 }
 
 ul, li, a{
+    color: unset;
     list-style: none;
     text-decoration: none;
+}
+
+.page__gradient {
+    background: #1a1a1a;
+    overflow-x: hidden;
+}
+
+.button {
+    background-color: var(--color-golden);
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+    background-color: var(--color-black);
+    color: var(--color-golden);
+}
+
+.section__padding {
+    padding: 4rem 6rem;
+}
+
+.section__margin {
+    margin: 4rem 6rem;
+}
+
+@media screen and (max-width: 850px) {
+    .section__padding {
+        padding: 2rem;
+    }
+
+    .section__margin {
+        margin: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .section__padding {
+        padding: 4rem 2rem;
+    }
+
+    .section__margin {
+        margin: 4rem 2rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .section__padding {
+        padding: 4rem 2rem;
+    }
+
+    .section__margin {
+        margin: 4rem 2rem;
+    }
 }

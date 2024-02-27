@@ -6,4 +6,4 @@ const HomeBanner = () => {
   )
 }
 
-export default HomeBanner
+export default HomeBanner;

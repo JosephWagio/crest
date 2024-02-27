@@ -1,0 +1,141 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text {
+    margin-right: 3rem;
+}
+
+.header-img{
+    width: 100%;
+}
+
+.header-text h1 {
+    font-family: var(--font-family);
+    color: var(--color-white);
+    font-size: 35px;
+    font-weight: 700;  
+    Line-height: 60px;
+    margin-bottom: 1rem;
+}
+
+.header-text p {
+    font-family: var(--font-family);
+    color: var(--color-white);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+    margin-bottom: 2rem;
+}
+
+.header-img img {
+    width: 600px;
+}
+
+.header-crypto {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 120px;
+    border-radius: 20px; 
+    border: 3px solid #FFD700;
+    box-shadow: 0px 0px 20px 0px #FFD700;
+    background: #FFD7000D;
+}
+
+.crypto {
+    margin: 0 2rem;
+}
+
+.crypto img {
+    width: 50px;
+}
+
+@media screen and (max-width: 1025px) {
+    .header-text h1 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 35px;
+    }
+
+    .header-img img {
+        width: 400px;
+    }
+
+    .section__padding {
+        padding: 2rem 5rem;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .header-text h1 {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 28px;
+        margin-bottom: .5rem;
+    }
+
+    .header-img img {
+        width: 250px;
+    }
+
+    .header-text p {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        margin-bottom: 1rem;
+    }
+
+    .header-crypto {
+        padding: 15px 60px;
+    }
+
+    .crypto {
+        margin: 0 1rem;
+    }
+
+    .crypto img {
+        width: 30px;
+    }
+
+    .section__padding {
+        padding: 1rem 4rem 2rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .header-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-text {
+        margin-right: 0rem;
+    }
+    .section__padding {
+        padding: 0 2rem;
+    }
+    .header-img {
+        margin-left: 4rem;
+    }
+    .header-crypto {
+        padding: 10px 30px;
+    }
+    .crypto {
+        margin: 0 .5rem;
+    }
+    .crypto img {
+        width: 20px;
+    }
+
+}

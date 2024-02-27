@@ -3,14 +3,14 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import './App.css';
 import Navbar from "./components/common/Nav/Navbar"
 import Footer from "./components/common/Footer/Footer"
-import Home from "./pages/Home"
+import Home from "./pages/Home/Home"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 
 
 function App() {
   return (
-    <div>
+    <div className="page__gradient">
       <Router>
         <Navbar/>
         <Routes>
