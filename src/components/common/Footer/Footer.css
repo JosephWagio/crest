@@ -4,12 +4,26 @@
 }
 
 .footer-container {
-	min-height: 40vh;
-	position: relative;
 	height: 90vh;
-	/* background: linear-gradient(90deg, var(--footer-bg), #423a0b); */
-	/* clip-path: polygon(60% 0%, 150% 90%, -30% 90%); */
-	/* clip-path: polygon(60% 0%, 150% 90%, -60% 90%); */
+}
+
+.footer-tip {
+	position: relative;
+	height: 20vh;
+	width: 100%;
+	background: linear-gradient(90deg, var(--footer-bg), #423a0b);
+	border-top-right-radius: 30%;
+	transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+}
+
+.footer-tip::before,
+.footer-tip::after {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	background: inherit;
+	border-top-right-radius: inherit;
 }
 
 /* .footer-container::after {

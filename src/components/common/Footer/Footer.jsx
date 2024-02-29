@@ -5,7 +5,7 @@ import "./Footer.css";
 const Footer = () => {
 	return (
 		<div className="footer-container">
-			<div className="content"></div>
+			<div className="footer-tip"></div>
 		</div>
 	);
 };
