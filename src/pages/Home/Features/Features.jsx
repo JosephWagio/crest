@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
-import SignUp from '../../../assets/Group 33552.png';
+import SignUp from '../../../assets/3d-render-smartphone-black-hands-with-finger-Photoroom.png-Photoroom.png';
 import vector from '../../../assets/Vector.png';
 import './Features.css'
 
@@ -44,7 +44,7 @@ const Features = () => {
             </div>
             <div className="signup">
                 <button>Sign Up <img src={vector} alt="vector" /></button>
-                <motion.div transition={bounceTransition} animate={{ y: [12, -12, 12]}} >
+                <motion.div className='signup-motion_img' transition={bounceTransition} animate={{ y: [12, -12, 12]}} >
                     <img src={SignUp} alt="signup" />
                 </motion.div>
             </div>
