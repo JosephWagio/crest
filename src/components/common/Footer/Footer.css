@@ -1,0 +1,21 @@
+:root {
+	--footer-bg: #6d5c06;
+	--secondary-bg: #ffd700;
+}
+
+.footer-container {
+	min-height: 40vh;
+	position: relative;
+	height: 90vh;
+	background: linear-gradient(90deg, var(--footer-bg), #423a0b);
+}
+
+.footer-container::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 200px;
+	background: #000;
+}
