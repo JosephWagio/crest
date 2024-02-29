@@ -65,6 +65,10 @@
     margin-bottom: .5rem;
 }
 
+.swiper-pagination-bullet {
+    display: none;
+}
+
 @media screen and (max-width: 965px) {
     .testimonial-header h1 {
         line-height: 55px;
