@@ -1,4 +1,5 @@
 .aboutus {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -10,12 +11,13 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	z-index: 100;
 }
 
 .aboutus-header {
 	margin-bottom: 3rem;
 	position: relative;
-	z-index: 1;
+	z-index: 10;
 }
 
 .aboutus-header h1 {
@@ -50,6 +52,7 @@
 	background-color: #000;
 	border-radius: 10px;
 	margin: 0 1.5rem;
+	z-index: 10;
 }
 
 .vision h3 {
@@ -94,22 +97,24 @@
 }
 
 .bottom-ellipse {
+	z-index: 1;
 	position: absolute;
 	left: 0;
-	top: 1650px;
+	top: 0;
 }
 
 .bottom-ellipse img {
-	height: 900px;
-	width: 900px;
+	height: 800px;
+	width: 800px;
 }
 
-.b .chooseus {
+.chooseus {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
 	margin-top: 3rem;
+	z-index: 100;
 }
 
 .chooseus-img {

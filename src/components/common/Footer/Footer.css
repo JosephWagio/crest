@@ -1,39 +1,67 @@
-:root {
-	--footer-bg: #6d5c06;
-	--secondary-bg: #ffd700;
-}
-
-.footer-container {
-	height: 90vh;
-}
-
-.footer-tip {
+.footer {
+	margin-top: 2rem;
 	position: relative;
-	height: 20vh;
 	width: 100%;
-	background: linear-gradient(90deg, var(--footer-bg), #423a0b);
-	border-top-right-radius: 30%;
-	transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+	height: 95vh;
+	z-index: 1;
+	background: url('../../../assets/Mask.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.footer-tip::before,
-.footer-tip::after {
-	content: "";
-	position: absolute;
-	width: inherit;
-	height: inherit;
-	background: inherit;
-	border-top-right-radius: inherit;
+.footer-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
 }
 
-/* .footer-container::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 200px;
-	background: #000;
-	clip-path: polygon(60% 0%, 150% 90%, -30% 90%);
-	clip-path: polygon(0 0, 150% 0%, -30% 90%);
-} */
+.footer-header h1 {
+	font-family: var(--font-family);
+	color: var(--color-white);
+	font-size: 70px;
+	font-weight: 600;
+	line-height: 70px;
+	margin-top: 3.5rem;
+}
+
+.footer-header p {
+	margin-top: 1rem;
+	font-family: var(--font-family);
+	color: var(--color-white);
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 39px;
+	text-align: center;
+}
+
+.footer-header h3 {
+	font-family: var(--font-family);
+	color: var(--color-white);
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 60px;
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.footer-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	position: relative;
+	z-index: 10;
+	margin-top: 2rem;
+}
+
+.footer-content img {
+	height: 125px;
+	width: 180px;
+}
+
+.footer-copyright {
+	color: var(--color-white);
+	margin-top: 1rem;
+	font-size: 15px;
+}
