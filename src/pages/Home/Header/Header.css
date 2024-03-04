@@ -28,16 +28,16 @@
 	font-size: 35px;
 	font-weight: 700;
 	line-height: 60px;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
 
 .header-text p {
 	font-family: var(--font-family);
 	color: var(--color-white);
-	font-size: 15px;
+	font-size: 18px;
 	font-weight: 500;
-	line-height: 23px;
-	margin-bottom: 2rem;
+	line-height: 25px;
+	margin-bottom: 2.5rem;
 }
 
 .header-img img {
@@ -155,10 +155,11 @@
 	.header-img {
 		margin-left: 6rem;
 		z-index: 100;
+		margin-bottom: 1rem;
 	}
 	.header-crypto {
 		padding: 15px 40px;
-		margin-top: 2rem;
+		margin-top: 3rem;
 	}
 	.crypto {
 		margin: 0 0.5rem;
