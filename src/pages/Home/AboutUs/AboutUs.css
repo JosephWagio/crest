@@ -195,6 +195,10 @@
 	.chooseus-content button {
 		margin-bottom: 1rem;
 	}
+	.bottom-ellipse img {
+		height: 700px;
+		width: 700px;
+	}
 }
 
 @media screen and (max-width: 990px) {
@@ -234,6 +238,10 @@
 		font-weight: 400;
 		margin: 0.5rem 0;
 	}
+	.bottom-ellipse img {
+		height: 530px;
+		width: 480px;
+	}
 }
 
 @media screen and (max-width: 680px) {
@@ -269,5 +277,9 @@
 	}
 	.chooseus-content li {
 		margin-top: 0.75rem;
+	}
+	.bottom-ellipse img {
+		height: 350px;
+		width: 280px;
 	}
 }

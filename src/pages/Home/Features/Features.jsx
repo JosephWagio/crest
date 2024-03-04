@@ -63,9 +63,6 @@ const Features = () => {
 					</div>
 				</div>
 			</div>
-			<div className="middle-ellipse">
-				<img src={MiddleEllipse} alt="" />
-			</div>
 			<div className="signup">
 				<button>
 					Sign Up <img src={vector} alt="vector" />
@@ -77,6 +74,9 @@ const Features = () => {
 				>
 					<img src={SignUp} alt="signup" />
 				</motion.div>
+			</div>
+			<div className="middle-ellipse">
+				<img src={MiddleEllipse} alt="" />
 			</div>
 		</div>
 	);

@@ -19,6 +19,7 @@
 
 .header-img {
 	width: 100%;
+	z-index: 400;
 }
 
 .header-text h1 {
@@ -54,7 +55,7 @@
 	box-shadow: 0px 0px 20px 0px #ffd700;
 	background: #ffd7000d;
 	position: relative;
-	z-index: 100;
+	z-index: 400;
 }
 
 .crypto {
@@ -92,6 +93,10 @@
 	.section__padding {
 		padding: 2rem 5rem;
 	}
+	.top-ellipse img {
+		width: 700px;
+		height: 650px;
+	}
 }
 
 @media screen and (max-width: 820px) {
@@ -104,6 +109,7 @@
 
 	.header-img img {
 		width: 250px;
+		z-index: 100;
 	}
 
 	.header-text p {
@@ -128,6 +134,10 @@
 	.section__padding {
 		padding: 1rem 4rem 2rem;
 	}
+	.top-ellipse img {
+		width: 500px;
+		height: 450px;
+	}
 }
 
 @media screen and (max-width: 540px) {
@@ -144,6 +154,7 @@
 	}
 	.header-img {
 		margin-left: 6rem;
+		z-index: 100;
 	}
 	.header-crypto {
 		padding: 15px 40px;
@@ -154,5 +165,12 @@
 	}
 	.crypto img {
 		width: 30px;
+	}
+	.top-ellipse img {
+		width: 300px;
+		height: 300px;
+	}
+	.button {
+		font-size: 12px;
 	}
 }

@@ -73,7 +73,7 @@
 }
 
 .middle-ellipse {
-	z-index: 1;
+	z-index: 3;
 	position: absolute;
 	top: -300px;
 	right: 0px;
@@ -90,7 +90,7 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	z-index: 1;
+	z-index: 10;
 }
 
 .signup button {
@@ -141,6 +141,10 @@
 	.signup {
 		display: flex;
 	}
+	.middle-ellipse img {
+		width: 700px;
+		height: 750px;
+	}
 }
 
 @media screen and (max-width: 770px) {
@@ -165,6 +169,10 @@
 	.details p {
 		font-size: 10px;
 		line-height: 14px;
+	}
+	.middle-ellipse img {
+		width: 450px;
+		height: 550px;
 	}
 }
 
@@ -196,5 +204,13 @@
 	}
 	.details p {
 		text-align: center;
+	}
+	.middle-ellipse img {
+		width: 280px;
+		height: 330px;
+	}
+	.middle-ellipse{
+		z-index: 1;
+		top: 50px;
 	}
 }
