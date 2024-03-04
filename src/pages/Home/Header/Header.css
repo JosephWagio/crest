@@ -28,7 +28,7 @@
 	font-size: 35px;
 	font-weight: 700;
 	line-height: 60px;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
 }
 
 .header-text p {
@@ -37,7 +37,7 @@
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 25px;
-	margin-bottom: 2.5rem;
+	margin-bottom: 3rem;
 }
 
 .header-img img {
@@ -155,11 +155,12 @@
 	.header-img {
 		margin-left: 6rem;
 		z-index: 100;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
 	}
 	.header-crypto {
 		padding: 15px 40px;
-		margin-top: 3rem;
+		margin-top: 4rem;
 	}
 	.crypto {
 		margin: 0 0.5rem;
