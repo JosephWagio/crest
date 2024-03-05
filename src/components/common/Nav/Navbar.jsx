@@ -29,8 +29,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-signup">
-        <p><Link to="/">Login</Link></p>
-        <button className='button'><Link to="/">Signup</Link></button>
+        <p><Link to="/signin">Login</Link></p>
+        <button className='button'><Link to="/signup">Signup</Link></button>
       </div>
 
       <div className="navbar-menu">
@@ -44,11 +44,11 @@ const Navbar = () => {
                 <li className='p__opensans'><Link to="/" onClick={handleClose}>Home</Link></li>
                 <li className='p__opensans'><Link to="/services" onClick={handleClose}>Services</Link></li>
                 <li className='p__opensans'><a href="#features" onClick={handleClose}>Features</a></li>
-                <li className='p__opensans'><a href="#testimonials" onClick={handleClose}>About Us</a></li>                
+                <li className='p__opensans'><a href="#testimonials" onClick={handleClose}>About Us</a></li>
               </ul>
               <div className="navbar-menu_container-links-signup">
-                <p><Link to="/">Login</Link></p>
-               <button className='button'><Link to="/contact-us">Signup</Link></button>
+                <p><Link to="/signin">Login</Link></p>
+                <button className='button'><Link to="/signup">Signup</Link></button>
               </div>
             </div>
           </div>
