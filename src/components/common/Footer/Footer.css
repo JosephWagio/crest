@@ -1,44 +1,224 @@
-:root {
-	--footer-bg: #6d5c06;
-	--secondary-bg: #ffd700;
-}
-
-.footer-container {
-	height: 90vh;
-	display: flex;
-	justify-content: center;
+.footer {
+	margin-top: 2rem;
 	position: relative;
-}
-
-.footer-tip {
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(90deg, var(--footer-bg), #423a0b);
-	/* clip-path: polygon(60% 0%, 150% 90%, -30% 90%); */
-	border-top-right-radius: 30%;
-	/* transform: rotate(-60deg) skewX(-5deg) scale(1.1, .866); */
-	border-radius: 61% 39% 0% 0% / 83% 45% 11% 0% ;
-
+	z-index: 1;
+	clip-path: polygon(55% 0, 100% 19%, 100% 100%, 0 100%, 0 29%);
+	background: linear-gradient(41deg, rgba(26, 26, 26, 1) 1%, rgba(255, 215, 0, 1) 100%);
 }
 
-/* .footer-tip::before{
-	background: red;
-	transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translateY(-50%);
+.footer-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
 }
 
-.footer-tip::after{
-	background: green;
-	transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translateX(50%);
-} */
+.footer-header h1 {
+	font-family: var(--font-family);
+	color: var(--color-white);
+	font-size: 70px;
+	font-weight: 600;
+	line-height: 70px;
+	margin-top: 3.5rem;
+}
 
-/* .footer-container::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 200px;
-	background: #000;
-	clip-path: polygon(60% 0%, 150% 90%, -30% 90%);
-	clip-path: polygon(0 0, 150% 0%, -30% 90%);
-} */
+.footer-header p {
+	margin-top: 1rem;
+	font-family: var(--font-family);
+	color: var(--color-white);
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 39px;
+	text-align: center;
+}
+
+.footer-header h3 {
+	font-family: var(--font-family);
+	color: var(--color-white);
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 60px;
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.footer-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	position: relative;
+	z-index: 10;
+	margin-top: 2rem;
+	padding-bottom: 2rem;
+	border-bottom: solid 1px;
+	border-color: #1a1a1a;
+}
+
+.logo img {
+	height: 110px;
+	width: 250px;
+}
+
+.logo p {
+	font-family: var(--font-family);
+	color: var(--color-white);
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: left;
+}
+
+.links {
+	margin-left: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.resources {
+	display: flex;
+	flex-direction: column;
+}
+
+.social-logo-container {	
+	display: flex;
+	flex-direction: row;
+}
+
+.social-logo {
+	margin: .5rem .5rem .5rem 0;
+}
+
+.social-logo img {
+	width: 35px;
+}
+
+.links h3,
+.resources h3,
+.social h3 {
+	color: var(--color-white);
+	font-family: var(--font-family);
+	margin-bottom: 0.5rem;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: left;
+}
+
+.links a,
+.resources a,
+.social a {
+	font-family: var(--font-family);
+	color: var(--color-white);
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 23px;
+	text-align: left;
+	margin: .2rem 0;
+}
+
+.links a:hover,
+.resources a:hover {
+	color: var(--color-black);
+}
+
+.footer-copyright {
+	color: var(--color-white);
+	margin-top: 1rem;
+	font-size: 15px;
+}
+
+@media screen and (max-width: 1025px) {
+	.footer-header h1 {
+	font-size: 55px;
+	font-weight: 500;
+	line-height: 60px;
+	margin-top: 5rem;
+	}
+	.footer-header p {
+	font-size: 28px;
+	line-height: 35px;
+	}
+	.footer-header h3{
+	font-size: 35px;
+	font-weight: 400;
+	line-height: 50px;
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.footer-content {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 10px;
+	}
+	.footer-header h1 {
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 45px;
+		margin-top: 7rem;
+	}
+	
+	.footer-header p {
+		margin-top: .5rem;
+		font-size: 22px;
+		line-height: 30px;
+	}
+	.footer-header h3 {
+		font-size: 28px;
+		font-weight: 400;
+		line-height: 35px;
+		margin: .5rem 0;
+	}
+	.logo img {
+		height: 90px;
+		width: 200px;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.footer-content {
+		grid-template-columns: 1fr 1fr;
+	}
+	.footer-header h1 {
+		font-size: 28px;
+		font-weight: 300;
+		line-height: 30px;
+		margin-top: 9rem;
+	}
+	
+	.footer-header p {
+		margin-top: .5rem;
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 300;
+	}
+	.footer-header h3 {
+		font-size: 23px;
+		font-weight: 400;
+		line-height: 25px;
+		margin: .5rem 0;
+	}
+	.logo img {
+		height: 70px;
+		width: 120px;
+	}
+	.logo P {
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 18px;
+	}
+	.links h3,
+	.resources h3,
+	.social h3 {
+		margin-bottom: 0.2rem;
+		font-size: 18px;
+		font-weight: 600;
+	}
+	.links a,
+	.resources a,
+	.social a {
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 18px;
+	}
+}

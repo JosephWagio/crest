@@ -59,9 +59,9 @@ const AboutUs = () => {
 						</Link>
 					</div>
 				</div>
-			</div>
-			<div className="bottom-ellipse">
-				<img src={BottomEllipse} alt="" />
+				<div className="bottom-ellipse">
+					<img src={BottomEllipse} alt="" />
+				</div>
 			</div>
 			<div className="chooseus">
 				<div className="chooseus-img">

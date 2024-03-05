@@ -8,9 +8,14 @@ import "./Navbar.css"
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
 
   const handleClose = () => {
     setToggleMenu((prev) => !prev)
+  }
+
+  const handleActiveLink = (link)=> {
+    setActiveLink(link)
   }
 
   return (
@@ -22,8 +27,8 @@ const Navbar = () => {
       </div>
       <div className="navbar-links_container">
         <ul className='navbar-links'>
-          <li className='p__opensans'><Link to="/">Home</Link></li>
-          <li className='p__opensans'><Link to="/services">Services</Link></li>
+          <li className={activeLink === "Home" ? "p__opensans active" : "p__opensans"}><Link to="/" onClick={() => handleActiveLink("Home")}>Home</Link></li>
+          <li className={activeLink === "Services" ? "p__opensans active" : "p__opensans"}><Link to="/services" onClick={() => handleActiveLink("Services")}>Services</Link></li>
           <li className='p__opensans'><a href="#features">Features</a></li>
           <li className='p__opensans'><a href="#aboutus">About Us</a></li>
         </ul>
@@ -41,8 +46,8 @@ const Navbar = () => {
             <IoCloseOutline fontSize={45} className='container__close' onClick={() => setToggleMenu(false)} />
             <div className="navbar-menu_container-links">
               <ul className='navbar-menu-links'>
-                <li className='p__opensans'><Link to="/" onClick={handleClose}>Home</Link></li>
-                <li className='p__opensans'><Link to="/services" onClick={handleClose}>Services</Link></li>
+                <li className={activeLink === "Home" ? "p__opensans active" : "p__opensans"}><Link to="/" onClick={handleClose}>Home</Link></li>
+                <li className={activeLink === "Services" ? "p__opensans active" : "p__opensans"}><Link to="/services" onClick={handleClose}>Services</Link></li>
                 <li className='p__opensans'><a href="#features" onClick={handleClose}>Features</a></li>
                 <li className='p__opensans'><a href="#testimonials" onClick={handleClose}>About Us</a></li>
               </ul>
