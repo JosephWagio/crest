@@ -1,0 +1,158 @@
+/* =============================== Register ======================*/
+.registerform {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100vh;
+  justify-content: center;
+  padding: 0 10%;
+}
+.logo__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+.logo__wrap a {
+  color: var(--color-white);
+  font-weight: 500;
+}
+.go-back {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: 0.3s;
+}
+.go-back:hover {
+  color: var(--color-golden);
+}
+.registerform__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  width: 100%;
+}
+.registerform__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../../assets/loginbg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  border-radius: 20px;
+}
+.registerform__img img {
+  width: 300px;
+  z-index: 20;
+}
+.registerform__img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 215, 0, 0.4);
+  border-radius: 20px;
+}
+.registerform__wrap {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  height: 75vh;
+  width: 75%;
+
+  border-radius: 20px;
+  background-color: var(--color-white);
+}
+.registerform__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  width: 90%;
+}
+.registerform__contents h2 {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input__field-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#input__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  width: 100%;
+}
+#input__field label {
+  font-weight: 500;
+  font-size: 14px;
+}
+#input__field input {
+  padding: 1rem;
+  border-radius: 7px;
+  border: 1.5px solid #e6dcee;
+}
+#input__field input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+}
+#input__field input:focus {
+  outline-color: var(--color-grey);
+}
+form button {
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-golden);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:hover {
+  background-color: #c7a900;
+}
+.switch-auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.switch-auth p {
+  font-size: 14px;
+  color: var(--color-grey);
+}
+.switch-auth p a {
+  font-weight: 600;
+  color: var(--color-golden);
+}
+
+/* ================================= Confirm mail ============================== */
+.confirm__mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
