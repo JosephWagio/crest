@@ -10,9 +10,13 @@ import Wallet from '../../assets/Wallet.png';
 import Support from '../../assets/Support.png';
 import Invest from '../../assets/Invest.png';
 import World from '../../assets/Content.png';
+import Navbar from '../../components/common/Nav/Navbar';
+import Footer from '../../components/common/Footer/Footer';
 
 const Service = () => {
   return (
+    <>
+      <Navbar />
     <div className='service section__padding'>
       <div className="top-ellipse-service">
 				<img src={Ellipse2} alt="" />
@@ -71,6 +75,8 @@ const Service = () => {
 				<img src={BottomEllipse} alt="" />
 			</div>
     </div>
+    <Footer />
+    </>
   )
 }
 
