@@ -49,7 +49,7 @@ const Navbar = () => {
                 <li className={activeLink === "Home" ? "p__opensans active" : "p__opensans"}><Link to="/" onClick={handleClose}>Home</Link></li>
                 <li className={activeLink === "Services" ? "p__opensans active" : "p__opensans"}><Link to="/services" onClick={handleClose}>Services</Link></li>
                 <li className='p__opensans'><a href="#features" onClick={handleClose}>Features</a></li>
-                <li className='p__opensans'><a href="#testimonials" onClick={handleClose}>About Us</a></li>
+                <li className='p__opensans'><a href="#aboutus" onClick={handleClose}>About Us</a></li>
               </ul>
               <div className="navbar-menu_container-links-signup">
                 <p><Link to="/signin">Login</Link></p>

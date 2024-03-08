@@ -5,6 +5,7 @@ import "./AboutUs.css";
 import Arrow from "../../../assets/arrow-right.png";
 import Choose from "../../../assets/6218785-Photoroom.png-Photoroom.png";
 import Check from "../../../assets/check.png";
+import MiddleEllipse from "../../../assets/Ellipse 3.png";
 import BottomEllipse from "../../../assets/Ellipse 4.png";
 
 const AboutUs = () => {
@@ -88,6 +89,9 @@ const AboutUs = () => {
 						</li>
 					</ul>
 				</div>
+			</div>
+			<div className="middle-ellipse-2">
+				<img src={MiddleEllipse} alt="" />
 			</div>
 		</div>
 	);

@@ -164,6 +164,13 @@
 	transform: translateY(-10px);
 }
 
+.middle-ellipse-2 {
+	display: none;
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+}
+
 @media screen and (max-width: 1110px) {
 	.vision {
 		margin: 0 1rem;
@@ -270,5 +277,13 @@
 	.bottom-ellipse img {
 		height: 350px;
 		width: 280px;
+	}
+	.middle-ellipse-2 {
+		display: flex;
+		top: 1000px;
+	}
+	.middle-ellipse-2 img {
+		width: 280px;
+		height: 330px;
 	}
 }
