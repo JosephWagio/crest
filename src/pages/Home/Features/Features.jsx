@@ -22,25 +22,25 @@ const Features = () => {
 				<div className="feature-key">
 					<h1>Key Features</h1>
 					<p>
-						We have put together the best features to better your{" "}
-						<span className="span">crypto</span> journey.
+						We have curated the finest features to enhance your {" "}
+						<span className="span">Investment</span> journey.
 					</p>
 					<button className="button">Learn more</button>
 				</div>
 				<div className="feature-details">
 					<div className="details">
-						<h3>Secure Wallet Management</h3>
+						<h3>Secure Portfolio Management</h3>
 						<p>
-							Experience peace of mind with our state-of-the-art wallet{" "}
-							<span className="span">management system</span>, ensuring the
-							highest level of security for your digital assets.
+							Experience peace of mind with our state-of-the-art Portfolio{" "}
+							<span className="span">Management System</span>, ensuring the
+							highest level of security for your financial assets.
 						</p>
 					</div>
 					<div className="details">
-						<h3>Intuitive Trading Platforms</h3>
+						<h3>Intuitive Investment Platforms</h3>
 						<p>
-							Seamlessly buy, sell, and trade cryptocurrencies on our
-							user-friendly <span className="span">trading platforms</span>,
+							Effortlessly invest, diversify, and manage your assets on our user-friendly
+							<span className="span"> Investment platforms</span>,
 							equipped with advanced tools and real-time market insights.
 						</p>
 					</div>
@@ -48,9 +48,9 @@ const Features = () => {
 						<h3>Diverse Investment Opportunities</h3>
 						<p>
 							Explore a wide range of{" "}
-							<span className="span">investment options</span>, from established
-							cryptocurrencies to emerging tokens and decentralized finance
-							(DeFi) projects.
+							<span className="span">investment options</span>, 
+							from traditional stocks and bonds to alternative assets like
+							real estate investment trusts (REITs) and venture capital opportunities.
 						</p>
 					</div>
 					<div className="details">

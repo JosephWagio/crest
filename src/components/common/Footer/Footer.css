@@ -58,7 +58,7 @@
 
 .logo img {
 	height: 110px;
-	width: 250px;
+	width: 220px;
 }
 
 .logo p {
@@ -126,6 +126,7 @@
 	color: var(--color-white);
 	margin-top: 1rem;
 	font-size: 15px;
+	padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 1025px) {

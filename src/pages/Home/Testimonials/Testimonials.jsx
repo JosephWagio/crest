@@ -16,17 +16,17 @@ const Testimonials = () => {
       id: 1,
       name: 'Emily Johnson',
       occupation: 'Pediatric Nurse',
-      content: 'Easy-to-use platform, diverse cryptocurrency options, and responsive customer support enhance the user experience.',
+      content: 'Easy-to-use platform, diverse investment options, and responsive customer support enhance the user experience.',
     },    {
       id: 2,
       name: 'Michael Briggs',
       occupation: 'Financial Analyst',
-      content: 'Innovative features, competitive exchange rates, and comprehensive educational resources make this site a top choice.',
+      content: 'Innovative features, competitive rates, and comprehensive educational resources make this site a top choice for investors.',
     },    {
       id: 3,
       name: 'Jennifer Smith',
       occupation: 'Event Planner',
-      content: 'Sleek interface, reliable transactions, and robust security measures make this crypto site a standout. Would definately recommend.',
+      content: 'Sleek interface, reliable transactions, and robust security measures make this financial platform a standout. Would definitely recommend.',
     },
     ];
 

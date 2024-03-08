@@ -96,17 +96,6 @@
 	transform: translateX(10px);
 }
 
-.bottom-ellipse {
-	z-index: 1;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-.bottom-ellipse img {
-	height: 800px;
-	width: 800px;
-}
 
 .chooseus {
 	display: flex;
@@ -197,7 +186,7 @@
 	}
 	.bottom-ellipse img {
 		height: 700px;
-		width: 700px;
+		width: 600px;
 	}
 }
 
