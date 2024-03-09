@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import {Outlet, Navigate} from "react-router-dom"
+import { useContext } from "react";
+import { Outlet, Navigate } from "react-router-dom";
+
+import AuthContext from "../context/AuthContext";
 
 const PrivateRoutes = () => {
+  const { user } = useContext(AuthContext);
+  return user ? <Outlet /> : <Navigate to="/" />;
+};
 
-    const [user, setUser] = useState(false)
-    return user ? <Outlet /> : <Navigate to="/" />;
-
-}
-
-export default PrivateRoutes
+export default PrivateRoutes;

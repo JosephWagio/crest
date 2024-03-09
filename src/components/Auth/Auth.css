@@ -35,6 +35,7 @@
   gap: 3rem;
 
   width: 100%;
+  height: 70vh;
 }
 .registerform__img {
   display: flex;
@@ -68,9 +69,8 @@
 .registerform__wrap {
   display: flex;
   justify-content: center;
-  padding: 2rem 1rem;
-  height: 75vh;
-  width: 75%;
+  padding: 1.5rem 2rem;
+  width: 70%;
 
   border-radius: 20px;
   background-color: var(--color-white);
@@ -78,12 +78,21 @@
 .registerform__contents {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 
-  width: 90%;
+  width: 100%;
+}
+.reg__form-head {
+  display: flex;
+  flex-direction: column;
+}
+.reg__form-head h2 {
+  color: var(--color-golden);
+}
+.reg__form-head p {
+  font-size: 14px;
 }
 .registerform__contents h2 {
-  color: #2d3748;
   font-weight: 500;
   font-size: 24px;
 }
@@ -149,10 +158,523 @@ form button:hover {
   color: var(--color-golden);
 }
 
-/* ================================= Confirm mail ============================== */
-.confirm__mail {
+/* =================================== Login ==================================== */
+.loginform__container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  gap: 3rem;
+
+  width: 100%;
+  height: 70vh;
+}
+.loginform__wrap {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 2rem;
+  width: 70%;
+
+  border-radius: 20px;
+  background-color: var(--color-white);
+}
+.loginform__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  width: 100%;
+}
+
+/* ================================= Confirm mail ============================== */
+.confirm__mail-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 147px);
+}
+.confirm__mail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1rem 3rem;
+  height: 260px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.confirm__mail div {
+  text-align: center;
+}
+.confirm__mail div h3 {
+  font-weight: 600;
+  font-size: 22px;
+}
+.confirm__mail div p {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 322px) {
+  .registerform__contents h2 {
+    color: #2d3748;
+    font-weight: 500;
+    font-size: 19px;
+  }
+  .registerform__contents {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .registerform__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    height: 100%;
+  }
+  .registerform__img {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(http://localhost:3000/static/media/loginbg.0764b3f204d2d8d78aeb.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .input__field-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+  }
+  .registerform__wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.1rem 1.1rem;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--color-white);
+  }
+  .registerform {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100vh;
+    justify-content: center;
+    padding: 0 3%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .go-back {
+    display: none;
+  }
+  .logo__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #input__field label {
+    font-weight: 500;
+    font-size: 13px;
+  }
+  #input__field input {
+    font-family: "Poppins", sans-serif;
+    padding: 0.8rem;
+    border-radius: 7px;
+    border: 1.5px solid #e6dcee;
+  }
+  form button {
+    padding: 0.8rem;
+    font-weight: 600;
+    color: var(--color-white);
+    background-color: var(--color-golden);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+  }
+
+  /* =========================================== login ================================== */
+  .loginform__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    height: 70vh;
+  }
+  .loginform__wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.3rem 1.3rem;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--color-white);
+  }
+  .reg__form-head p {
+    font-size: 12px;
+  }
+  .loginform__contents {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 323px) and (max-width: 376px) {
+  .registerform__contents h2 {
+    color: #2d3748;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .registerform__contents {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .registerform__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    height: 100%;
+  }
+  .registerform__img {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(http://localhost:3000/static/media/loginbg.0764b3f204d2d8d78aeb.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .input__field-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+
+    width: 100%;
+  }
+  .registerform__wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.1rem 1.1rem;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--color-white);
+  }
+  .registerform {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100vh;
+    justify-content: center;
+    padding: 0 3%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .go-back {
+    display: none;
+  }
+  .logo__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #input__field label {
+    font-weight: 500;
+    font-size: 13px;
+  }
+  #input__field input {
+    padding: 0.8rem;
+    border-radius: 7px;
+    border: 1.5px solid #e6dcee;
+  }
+  form button {
+    padding: 0.8rem;
+    font-weight: 600;
+    color: var(--color-white);
+    background-color: var(--color-golden);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+  }
+
+  /* =========================================== login ================================== */
+  .loginform__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    height: 70vh;
+  }
+  .loginform__wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.3rem 1.3rem;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--color-white);
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 426px) {
+  .registerform__contents h2 {
+    color: #2d3748;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .registerform__contents {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .registerform__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    height: 100%;
+  }
+  .registerform__img {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(http://localhost:3000/static/media/loginbg.0764b3f204d2d8d78aeb.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .input__field-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+
+    width: 100%;
+  }
+  .registerform__wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.3rem 1.3rem;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--color-white);
+  }
+  .registerform {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100vh;
+    justify-content: center;
+    padding: 0 5%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .go-back {
+    display: none;
+  }
+  .logo__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #input__field label {
+    font-weight: 500;
+    font-size: 13px;
+  }
+  #input__field input {
+    padding: 0.8rem;
+    border-radius: 7px;
+    border: 1.5px solid #e6dcee;
+  }
+  form button {
+    padding: 0.8rem;
+    font-weight: 600;
+    color: var(--color-white);
+    background-color: var(--color-golden);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+  }
+
+  /* =========================================== login ================================== */
+  .loginform__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    height: 70vh;
+  }
+  .loginform__wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 1.5rem;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--color-white);
+  }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .registerform__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    height: 100%;
+  }
+  .registerform__img {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(http://localhost:3000/static/media/loginbg.0764b3f204d2d8d78aeb.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .input__field-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+  }
+  .registerform__contents {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .registerform__wrap {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 2rem;
+    width: 80%;
+    border-radius: 20px;
+    background-color: var(--color-white);
+  }
+
+  /* ========================= login ======================= */
+  .loginform__wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 1.5rem;
+    width: 80%;
+    border-radius: 20px;
+    background-color: var(--color-white);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .registerform {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100vh;
+    justify-content: center;
+    padding: 0 5%;
+  }
+  .registerform__contents {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .registerform__wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    width: 60%;
+    border-radius: 20px;
+    background-color: var(--color-white);
+  }
+  .input__field-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+  }
+  .registerform__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 75vh;
+  }
+
+  /* ====================================== login ========================================== */
+  .loginform__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 70vh;
+  }
+  .loginform__contents {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .loginform__wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 1.5rem;
+    width: 80%;
+    border-radius: 20px;
+    background-color: var(--color-white);
+  }
 }

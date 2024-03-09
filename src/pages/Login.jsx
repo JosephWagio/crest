@@ -1,10 +1,13 @@
 import React from 'react'
 
 import "../components/Auth/Auth.css"
+import LoginForm from '../components/Auth/LoginForm'
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <div>
+      <LoginForm />
+    </div>
   )
 }
 
