@@ -10,8 +10,7 @@ import Logo from "../../assets/logo2.png";
 import Crest from "../../assets/crest.png";
 import AuthContext from "../../context/AuthContext.js"
 
-const RegisterForm = () => {
-
+const LoginForm = () => {
     const IOSSwitch = styled((props) => (
         <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
     ))(({ theme }) => ({
@@ -60,7 +59,7 @@ const RegisterForm = () => {
         },
     }));
 
-    const { registerUser, setShowAlert,
+    const { loginUser, setShowAlert,
         showAlert,
         alertMessage,
         alertSeverity, } = useContext(AuthContext)
@@ -79,13 +78,8 @@ const RegisterForm = () => {
                 </Link>
             </div>
 
-            <div className="registerform__container">
-                <div className="registerform__img">
-                    <div>
-                        <img src={Crest} alt="" />
-                    </div>
-                </div>
-                <div className="registerform__wrap">
+            <div className="loginform__container">
+                <div className="loginform__wrap">
                     {showAlert && (
                         <Alert
                             severity={alertSeverity}
@@ -95,19 +89,12 @@ const RegisterForm = () => {
                             {alertMessage}
                         </Alert>
                     )}
-                    <div className="registerform__contents">
-                        <h2>Create a secured account</h2>
-                        <form onSubmit={registerUser}>
-                            <div className="input__field-wrapper">
-                                <div id="input__field">
-                                    <label>First Name</label>
-                                    <input type="text" name="firstname" placeholder="Your First Name" />
-                                </div>
-                                <div id="input__field">
-                                    <label>Last Name</label>
-                                    <input type="text" name="lastname" placeholder="Your Last Name" />
-                                </div>
-                            </div>
+                    <div className="loginform__contents">
+                        <div className='reg__form-head'>
+                            <h2>Welcome Back</h2>
+                            <p>Enter your email and password to sign in</p>
+                        </div>
+                        <form onSubmit={loginUser}>
                             <div id="input__field">
                                 <label>Email</label>
                                 <input type="text" name="email" placeholder="admin@gmail.com" />
@@ -120,11 +107,16 @@ const RegisterForm = () => {
                                 control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
                                 label="Remember me"
                             />
-                            <button type="submit">Sign Up</button>
+                            <button type="submit">Sign In</button>
                         </form>
                         <div className="switch-auth">
-                            <p>Already have an account? <Link to='/signin'>Sign in</Link></p>
+                            <p>Don't have an account? <Link to='/signup'>Sign up</Link></p>
                         </div>
+                    </div>
+                </div>
+                <div className="registerform__img">
+                    <div>
+                        <img src={Crest} alt="" />
                     </div>
                 </div>
             </div>
@@ -132,4 +124,4 @@ const RegisterForm = () => {
     )
 }
 
-export default RegisterForm
+export default LoginForm
