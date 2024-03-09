@@ -28,12 +28,12 @@ const Header = () => {
 				<div className="header-text">
 					<h1>
 						Empowering Your Financial <br /> Future with{" "}
-						<span className="span">Cryptocurrency</span>{" "}
+						<span className="span">Investment Opportunities.</span>{" "}
 					</h1>
 					<p>
 						At Crest Holdings LTD, we believe in democratizing access to the
-						world of <span className="span">Cryptocurrency</span> and blockchain
-						technology. Join us on our journey to reshape the future of finance.
+						world of <span className="span">Finance and Investment</span>
+						. Join us on our journey to reshape the future of finance.
 					</p>
 					<button className="button">
 						<Link to="/">Get Started</Link>

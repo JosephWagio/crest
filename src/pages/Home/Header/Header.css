@@ -25,7 +25,7 @@
 .header-text h1 {
 	font-family: var(--font-family);
 	color: var(--color-white);
-	font-size: 35px;
+	font-size: 32px;
 	font-weight: 700;
 	line-height: 60px;
 	margin-bottom: 2rem;
@@ -46,14 +46,14 @@
 
 .header-crypto {
 	margin-top: 11rem;
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	padding: 30px 120px;
 	border-radius: 20px;
 	border: 3px solid #ffd700;
 	box-shadow: 0px 0px 20px 0px #ffd700;
-	background: #ffd7000d;
+	background: var(--color-gray);
 	position: relative;
 	z-index: 400;
 }
@@ -75,8 +75,8 @@
 }
 
 .top-ellipse img {
-	width: 900px;
-	height: 850px;
+	width: 850px;
+	height: 800px;
 }
 
 @media screen and (max-width: 1025px) {
@@ -113,9 +113,9 @@
 	}
 
 	.header-text p {
-		font-size: 12px;
+		font-size: 14px;
 		font-weight: 300;
-		line-height: 18px;
+		line-height: 20px;
 		margin-bottom: 1rem;
 	}
 
@@ -160,7 +160,7 @@
 	}
 	.header-crypto {
 		padding: 15px 40px;
-		margin-top: 4rem;
+		margin-top: 3.5rem;
 	}
 	.crypto {
 		margin: 0 0.5rem;

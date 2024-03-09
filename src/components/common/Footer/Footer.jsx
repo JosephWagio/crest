@@ -22,23 +22,23 @@ const Footer = () => {
       <div className="footer-content">
         <div className="logo">
           <img src={Logo} alt="logo" />
-          <p>Investing in futures, pioneering crypto: Crest Holdings LTD, your trusted partner for financial growth and innovation.</p>
+          <p>Investing in futures, pioneering Finance: Crest Holdings LTD, your trusted partner for financial growth and innovation.</p>
         </div>
         <div className="links">
           <h3>Quick Links</h3>
             <><Link to="/">Explore</Link></>
-            <><Link to="/">Buy and Sell</Link></>
-            <><Link to="/">Send and Receive</Link></>
-            <><Link to="/">Exchange Currency</Link></>
-            <><Link to="/">Pay for Business</Link></>
+            <><Link to="/">Buy and Sell Assets</Link></>
+            <><Link to="/">Send and Receive Payments</Link></>
+            <><Link to="/">Exchange Currencies</Link></>
+            <><Link to="/">Pay for Business Transactions</Link></>
         </div>
         <div className="resources">
           <h3>Resources</h3>
             <><Link to="/">Earn</Link></>
-            <><Link to="/">Account Funding</Link></>
-            <><Link to="/">Secure Exchange</Link></>
-            <><Link to="/">Smart Token</Link></>
-            <><Link to="/">Crypto API</Link></>
+            <><Link to="/">Grow Your Account</Link></>
+            <><Link to="/">Secure Transactions</Link></>
+            <><Link to="/">Smart Investment Token</Link></>
+            <><Link to="/">Access Crypto API</Link></>
         </div>
         <div className="social">
           <h3>Socials</h3>

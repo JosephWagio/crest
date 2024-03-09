@@ -5,6 +5,7 @@ import "./AboutUs.css";
 import Arrow from "../../../assets/arrow-right.png";
 import Choose from "../../../assets/6218785-Photoroom.png-Photoroom.png";
 import Check from "../../../assets/check.png";
+import MiddleEllipse from "../../../assets/Ellipse 3.png";
 import BottomEllipse from "../../../assets/Ellipse 4.png";
 
 const AboutUs = () => {
@@ -25,7 +26,7 @@ const AboutUs = () => {
 						<h3>Our Journey</h3>
 						<p>
 							Explore <span className="span">our evolution</span> from a
-							pioneering startup to a trusted leader in the cryptocurrency
+							pioneering startup to a trusted leader in the Finance and Investment
 							industry. Discover how our relentless pursuit of excellence has
 							shaped our success story.
 						</p>
@@ -37,7 +38,7 @@ const AboutUs = () => {
 						<h3>Our Mission</h3>
 						<p>
 							At Crest Holding Ltd, <span className="span">our mission</span> is
-							to democratize access to cryptocurrency and blockchain technology.
+							to democratize access to Finance and Investment opportunities.
 							We're committed to providing innovative solutions that empower
 							individuals and businesses to thrive in the digital economy.
 						</p>
@@ -88,6 +89,9 @@ const AboutUs = () => {
 						</li>
 					</ul>
 				</div>
+			</div>
+			<div className="middle-ellipse-2">
+				<img src={MiddleEllipse} alt="" />
 			</div>
 		</div>
 	);

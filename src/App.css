@@ -63,6 +63,58 @@ a {
   margin: 4rem 6rem;
 }
 
+.top-ellipse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.top-ellipse img {
+  width: 900px;
+  height: 850px;
+}
+
+.middle-ellipse {
+  z-index: 1;
+  position: absolute;
+  top: -300px;
+  right: 0px;
+}
+
+.middle-ellipse img {
+  width: 900px;
+  height: 1000px;
+}
+
+.bottom-ellipse {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bottom-ellipse img {
+  height: 850px;
+  width: 700px;
+}
+
+@media screen and (max-width: 1025px) {
+  .top-ellipse img {
+    width: 700px;
+    height: 650px;
+  }
+  .middle-ellipse img {
+    width: 700px;
+    height: 750px;
+  }
+  .bottom-ellipse img {
+    height: 700px;
+    width: 700px;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .section__padding {
     padding: 2rem;
@@ -70,6 +122,18 @@ a {
 
   .section__margin {
     margin: 2rem;
+  }
+  .top-ellipse img {
+    width: 500px;
+    height: 450px;
+  }
+  .middle-ellipse img {
+    width: 450px;
+    height: 550px;
+  }
+  .bottom-ellipse img {
+    height: 530px;
+    width: 480px;
   }
 }
 
@@ -81,6 +145,10 @@ a {
   .section__margin {
     margin: 4rem 2rem;
   }
+  .bottom-ellipse img {
+    height: 350px;
+    width: 280px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -90,5 +158,18 @@ a {
 
   .section__margin {
     margin: 4rem 2rem;
+  }
+
+  .top-ellipse img {
+    width: 300px;
+    height: 300px;
+  }
+  .middle-ellipse img {
+    width: 280px;
+    height: 330px;
+  }
+  .middle-ellipse {
+    z-index: 1;
+    top: 50px;
   }
 }

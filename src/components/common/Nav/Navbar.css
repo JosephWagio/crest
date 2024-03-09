@@ -23,8 +23,8 @@
 }
 
 .navbar-links_logo img {
-	height: 125px;
-	width: 150px;
+	height: 100px;
+	width: 170px;
 }
 
 .navbar-signup {
@@ -171,25 +171,21 @@ ul li {
 		display: flex;
 	}
 
-	.navbar-links_logo img {
-		width: 150px;
-	}
-
 	.navbar-menu-links li {
 		font-size: 1.5rem;
 	}
 	.navbar-links_logo img {
 		height: 100px;
-		width: 120px;
+		width: 170px;
 	}
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 450px) {
 	.navbar-signup {
 		display: none;
 	}
 	.navbar-links_logo img {
 		height: 80px;
-		width: 100px;
+		width: 150px;
 	}
 }

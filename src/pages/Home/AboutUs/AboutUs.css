@@ -96,17 +96,6 @@
 	transform: translateX(10px);
 }
 
-.bottom-ellipse {
-	z-index: 1;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-.bottom-ellipse img {
-	height: 800px;
-	width: 800px;
-}
 
 .chooseus {
 	display: flex;
@@ -175,6 +164,13 @@
 	transform: translateY(-10px);
 }
 
+.middle-ellipse-2 {
+	display: none;
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+}
+
 @media screen and (max-width: 1110px) {
 	.vision {
 		margin: 0 1rem;
@@ -197,7 +193,7 @@
 	}
 	.bottom-ellipse img {
 		height: 700px;
-		width: 700px;
+		width: 600px;
 	}
 }
 
@@ -281,5 +277,13 @@
 	.bottom-ellipse img {
 		height: 350px;
 		width: 280px;
+	}
+	.middle-ellipse-2 {
+		display: flex;
+		top: 1000px;
+	}
+	.middle-ellipse-2 img {
+		width: 280px;
+		height: 330px;
 	}
 }
