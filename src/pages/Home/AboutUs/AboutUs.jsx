@@ -30,7 +30,7 @@ const AboutUs = () => {
 							industry. Discover how our relentless pursuit of excellence has
 							shaped our success story.
 						</p>
-						<Link to="/">
+						<Link to="/signin">
 							Learn More <img src={Arrow} alt="arrow" />
 						</Link>
 					</div>
@@ -42,7 +42,7 @@ const AboutUs = () => {
 							We're committed to providing innovative solutions that empower
 							individuals and businesses to thrive in the digital economy.
 						</p>
-						<Link to="/">
+						<Link to="/signin">
 							Learn More <img src={Arrow} alt="arrow" />
 						</Link>
 					</div>
@@ -55,7 +55,7 @@ const AboutUs = () => {
 							and bios, offer insights into their expertise, experience, and
 							contributions to the company's growth and success.
 						</p>
-						<Link to="/">
+						<Link to="/signin">
 							Learn More <img src={Arrow} alt="arrow" />
 						</Link>
 					</div>
@@ -75,7 +75,7 @@ const AboutUs = () => {
 						Crest Holdings LTD
 					</p>
 					<button className="button">
-						<Link to="/">Learn More</Link>
+						<Link to="/signin">Learn More</Link>
 					</button>
 					<ul>
 						<li>

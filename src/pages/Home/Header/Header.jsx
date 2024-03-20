@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import HeaderImg from "../../../assets/BTC.png";
+import HeaderImg from "../../../assets/header.png";
 import BTC from "../../../assets/ic_btc.png";
 import ETH from "../../../assets/ic_eth.png";
 import BNB from "../../../assets/ic_bnb.png";
@@ -36,7 +36,7 @@ const Header = () => {
 						. Join us on our journey to reshape the future of finance.
 					</p>
 					<button className="button">
-						<Link to="/">Get Started</Link>
+						<Link to="/signin">Get Started</Link>
 					</button>
 				</div>
 				<div className="header-img">

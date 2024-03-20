@@ -31,52 +31,54 @@ const Testimonials = () => {
     ];
 
     return (
-        <div className='testimonials section__padding'>
-            <div className="testimonial-header">
-                <h1 className="headtext__cormorant">Testimonials From <span className="span">CREST HOLDINGS</span> Members</h1>
+        <>
+            <div className='testimonials section__padding'>
+                <div className="testimonial-header">
+                    <h1 className="headtext__cormorant">Testimonials From <span className="span">CREST HOLDINGS</span> Members</h1>
+                </div>
+                <div>
+                    <Swiper
+                        slidesPerView={3}
+                        spaceBetween={30}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                        breakpoints={{
+                            250: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                            },
+                            695: {
+                            slidesPerView: 2,
+                            spaceBetween: 40,
+                            },
+                            1440: {
+                            slidesPerView: 3,
+                            spaceBetween: 50,
+                            },
+                        }}
+                        className="mySwiper"  
+                        modules={[Autoplay, Pagination]}
+                    >
+                        {testimonialsData.map((testimonial) => (
+                        <SwiperSlide key={testimonial.id} className='testimonial-swiper'>
+                            <div className="img">
+                                <img src={Profile} alt={`Profile of ${testimonial.author}`} />
+                            </div>
+                            <div className="profile">
+                                <h5 className="p__opensans">{testimonial.name}</h5>
+                                <h6 className="p__cormorant">{testimonial.occupation}</h6>
+                            </div><div className="content">
+                                <p className="p__opensans">{testimonial.content}</p>
+                                <img src={Star} alt="stars" />
+                            </div>
+                        </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
             </div>
-            <div>
-                <Swiper
-                    slidesPerView={3}
-                    spaceBetween={30}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    autoplay={{ delay: 3000, disableOnInteraction: false }}
-                    breakpoints={{
-                        250: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                        },
-                        695: {
-                        slidesPerView: 2,
-                        spaceBetween: 40,
-                        },
-                        1440: {
-                        slidesPerView: 3,
-                        spaceBetween: 50,
-                        },
-                    }}
-                    className="mySwiper"  
-                    modules={[Autoplay, Pagination]}
-                >
-                    {testimonialsData.map((testimonial) => (
-                    <SwiperSlide key={testimonial.id} className='testimonial-swiper'>
-                        <div className="img">
-                            <img src={Profile} alt={`Profile of ${testimonial.author}`} />
-                        </div>
-                        <div className="profile">
-                            <h5 className="p__opensans">{testimonial.name}</h5>
-                            <h6 className="p__cormorant">{testimonial.occupation}</h6>
-                        </div><div className="content">
-                            <p className="p__opensans">{testimonial.content}</p>
-                            <img src={Star} alt="stars" />
-                        </div>
-                    </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
-        </div>
+        </>
     );
 }
 

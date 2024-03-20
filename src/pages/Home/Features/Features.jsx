@@ -5,6 +5,7 @@ import SignUp from "../../../assets/3d-render-smartphone-black-hands-with-finger
 import vector from "../../../assets/Vector.png";
 import MiddleEllipse from "../../../assets/Ellipse 3.png";
 import "./Features.css";
+import { Link } from "react-router-dom";
 
 const Features = () => {
 	const bounceTransition = {
@@ -25,7 +26,7 @@ const Features = () => {
 						We have curated the finest features to enhance your {" "}
 						<span className="span">Investment</span> journey.
 					</p>
-					<button className="button">Learn more</button>
+					<button className="button"><Link to="/signin">Learn more</Link></button>
 				</div>
 				<div className="feature-details">
 					<div className="details">
@@ -65,7 +66,9 @@ const Features = () => {
 			</div>
 			<div className="signup">
 				<button>
-					Sign Up <img src={vector} alt="vector" />
+					<Link to="/signin">
+						Sign Up <img src={vector} alt="vector" />
+					</Link>
 				</button>
 				<motion.div
 					className="signup-motion_img"

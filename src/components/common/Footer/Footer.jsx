@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { RiFacebookFill } from "react-icons/ri";
 
 import "./Footer.css";
 import Logo from '../../../assets/Logo-Photoroom.png-Photoroom.png';
@@ -17,7 +14,7 @@ const Footer = () => {
         <h1>200 000+</h1>
         <p>Users and Counting</p>
         <h3>What are you waiting for?</h3>
-        <button className="button">Get Started</button>
+        <button className="button"><Link to="/signin">Get Started</Link></button>
       </div>
       <div className="footer-content">
         <div className="logo">
@@ -26,19 +23,19 @@ const Footer = () => {
         </div>
         <div className="links">
           <h3>Quick Links</h3>
-            <><Link to="/">Explore</Link></>
-            <><Link to="/">Buy and Sell Assets</Link></>
-            <><Link to="/">Send and Receive Payments</Link></>
-            <><Link to="/">Exchange Currencies</Link></>
-            <><Link to="/">Pay for Business Transactions</Link></>
+            <><Link to="/signin">Explore</Link></>
+            <><Link to="/signin">Buy and Sell Assets</Link></>
+            <><Link to="/signin">Send and Receive Payments</Link></>
+            <><Link to="/signin">Exchange Currencies</Link></>
+            <><Link to="/signin">Pay for Business Transactions</Link></>
         </div>
         <div className="resources">
           <h3>Resources</h3>
-            <><Link to="/">Earn</Link></>
-            <><Link to="/">Grow Your Account</Link></>
-            <><Link to="/">Secure Transactions</Link></>
-            <><Link to="/">Smart Investment Token</Link></>
-            <><Link to="/">Access Crypto API</Link></>
+            <><Link to="/signin">Earn</Link></>
+            <><Link to="/signin">Grow Your Account</Link></>
+            <><Link to="/signin">Secure Transactions</Link></>
+            <><Link to="/signin">Smart Investment Token</Link></>
+            <><Link to="/signin">Access Crypto API</Link></>
         </div>
         <div className="social">
           <h3>Socials</h3>
@@ -47,7 +44,7 @@ const Footer = () => {
             <div className="social-logo"><img src={X} alt="Twitter" /></div>
             <div className="social-logo"><img src={IG} alt="Instargran" /></div>
           </div>
-          <a href="mailto:wagiojoseph@gmail.com">crestholding@gmail.com</a>     
+          <a href="mailto:wagiojoseph@gmail.com">crestholding@gmail.com</a>   
         </div>
       </div>
       <div className="footer-copyright">

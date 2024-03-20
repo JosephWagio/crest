@@ -20,6 +20,7 @@
 .header-img {
 	width: 100%;
 	z-index: 400;
+	margin-left: 3rem;
 }
 
 .header-text h1 {
@@ -41,7 +42,7 @@
 }
 
 .header-img img {
-	width: 600px;
+	width: 450px;
 }
 
 .header-crypto {
