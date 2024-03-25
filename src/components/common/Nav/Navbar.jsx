@@ -40,12 +40,12 @@ const Navbar = () => {
         </ul>
       </div>
       {user ? (
-        <div className="navbar-menu_container-links-signup">
+        <div className="navbar-signup">
           <p><Link to="/dashboard">Dashboard</Link></p>
           <button className='button' onClick={logoutUser}>Logout</button>
         </div>
       ) : (
-        <div className="navbar-menu_container-links-signup">
+        <div className="navbar-signup">
           <p><Link to="/signin">Login</Link></p>
           <button className='button'><Link to="/signup">Signup</Link></button>
         </div>

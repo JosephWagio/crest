@@ -215,4 +215,8 @@
 	.middle-ellipse{
 		top: 50px;
 	}
+	.signup button {
+		padding: 13px 15px;
+		font-size: 13px;
+	}
 }
