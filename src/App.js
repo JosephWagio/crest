@@ -27,7 +27,7 @@ function App() {
 
             {/* Protected Routes */}
             <Route element={<PrivateRoutes />}>
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard/*" element={<Dashboard />} />
               <Route path="/kyc-verification" element={<Kyc />} />
             </Route>
           </Routes>
