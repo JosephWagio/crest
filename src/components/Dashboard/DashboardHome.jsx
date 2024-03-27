@@ -1,9 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import SidebarMenu from './Sidebar';
 
 const DashboardHome = () => {
   return (
-    <div>DashboardHome</div>
-  )
-}
+    <>
+      <header>
+        <div className="heading">
+          <h1>Good Morning</h1>
+          <p>Welcome back, Admin</p>
+        </div>
+      </header>
 
-export default DashboardHome
+      
+      <div className='dashboard'>
+
+      </div>
+    </>
+
+  );
+};
+
+export default DashboardHome;

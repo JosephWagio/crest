@@ -2,30 +2,26 @@ import { Route, Routes } from 'react-router-dom'
 
 
 import "../components/Dashboard/Dashboard.css"
-import Sidebar from '../components/Dashboard/Sidebar'
-import ProfileSideBar from '../components/Dashboard/ProfileSideBar'
+import SidebarMenu from '../components/Dashboard/Sidebar'
 import DashboardHome from '../components/Dashboard/DashboardHome'
-import Wallet from '../components/Dashboard/Wallet'
-import Deposit from '../components/Dashboard/Deposit'
-import Withdraw from '../components/Dashboard/Withdraw'
-import Refferal from '../components/Dashboard/Refferal'
-import Setting from '../components/Dashboard/Setting'
+import { Investment, Deposit, Withdraw, Referral, Settings } from '../components/Dashboard/Screens'
+import ProfileSideBar from '../components/Dashboard/ProfileSideBar'
 
 const Dashboard = () => {
     return (
         <div className='dashboard'>
-            <Sidebar/>
+            <SidebarMenu/>
             <Routes>
-                <Route path='/' element={<DashboardHome/>}/>
-                <Route path='wallet' element={<Wallet/>}/>
+                <Route path='home' element={<DashboardHome/>}/>
+                <Route path='investment' element={<Investment/>}/>
                 <Route path='deposit' element={<Deposit/>}/>
                 <Route path='withdraw' element={<Withdraw/>}/>
-                <Route path='refferal' element={<Refferal/>}/>
-                <Route path='setting' element={<Setting/>}/>
+                <Route path='refferal' element={<Referral/>}/>
+                <Route path='setting' element={<Settings/>}/>
             </Routes>
             <ProfileSideBar/>
         </div>
     )
 }
 
-export default Dashboard
+export default Dashboard;

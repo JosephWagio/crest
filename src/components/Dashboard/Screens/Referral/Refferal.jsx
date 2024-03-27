@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Refferal = () => {
+const Referral = () => {
   return (
     <div>Refferal</div>
   )
 }
 
-export default Refferal
+export default Referral;
