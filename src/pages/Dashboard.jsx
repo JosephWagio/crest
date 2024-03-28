@@ -10,16 +10,16 @@ import ProfileSideBar from '../components/Dashboard/ProfileSideBar'
 const Dashboard = () => {
     return (
         <div className='dashboard'>
-            <SidebarMenu/>
+            <SidebarMenu />
             <Routes>
-                <Route path='home' element={<DashboardHome/>}/>
-                <Route path='investment' element={<Investment/>}/>
-                <Route path='deposit' element={<Deposit/>}/>
-                <Route path='withdraw' element={<Withdraw/>}/>
-                <Route path='refferal' element={<Referral/>}/>
-                <Route path='setting' element={<Settings/>}/>
+                <Route path='home' element={<DashboardHome />} />
+                <Route path='investment' element={<Investment />} />
+                <Route path='deposit' element={<Deposit />} />
+                <Route path='withdraw' element={<Withdraw />} />
+                <Route path='refferal' element={<Referral />} />
+                <Route path='setting' element={<Settings />} />
             </Routes>
-            <ProfileSideBar/>
+            <ProfileSideBar />
         </div>
     )
 }

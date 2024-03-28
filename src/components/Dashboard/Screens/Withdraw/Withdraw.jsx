@@ -2,7 +2,7 @@ import React from 'react'
 
 const Withdraw = () => {
   return (
-    <div>Withdraw</div>
+    <div className='main-content'>Withdraw</div>
   )
 }
 

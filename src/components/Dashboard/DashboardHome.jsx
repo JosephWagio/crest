@@ -1,22 +1,15 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
-import SidebarMenu from './Sidebar';
 
 const DashboardHome = () => {
   return (
-    <>
+    <div className='main-content'>
       <header>
         <div className="heading">
-          <h1>Good Morning</h1>
-          <p>Welcome back, Admin</p>
+          <p>Dashboard</p>
+          <p>Home</p>
         </div>
       </header>
-
-      
-      <div className='dashboard'>
-
-      </div>
-    </>
+    </div>
 
   );
 };

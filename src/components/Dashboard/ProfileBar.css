@@ -1,0 +1,82 @@
+.right-sidebar {
+  right: 0;
+}
+.profile-bar__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 3rem 1rem;
+  width: 100%;
+}
+.profile-bar__design {
+  background-color: #ffffff33;
+  height: 1px;
+  width: 100%;
+}
+.profile-bar__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+
+  width: 100%;
+}
+.profile-bar__head img {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.user__name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.user__name p {
+  color: var(--color-white);
+  font-weight: 500;
+}
+.profile-bar__head a {
+  color: var(--color-golden);
+  font-size: 14px;
+}
+.profile-bar__account,
+.profile-bar__assets {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 100%;
+}
+.profile-bar__account h3,
+.profile-bar__assets h3 {
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 15px;
+}
+.profile-bar__account div,
+.profile-bar__assets div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.profile-bar__account div p,
+.profile-bar__assets div p {
+  color: #ffffff80;
+  font-size: 13px;
+}
+.profile-bar__account div span {
+  color: #e1dfeccc;
+  font-size: 13px;
+}
+.profile-bar__assets div span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  color: #e1dfeccc;
+  font-size: 13px;
+}

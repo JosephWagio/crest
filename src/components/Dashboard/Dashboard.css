@@ -1,3 +1,20 @@
-.dashboard-container {
-    margin-left: 260px;
+.dashboard {
+  display: flex;
+  background-color: #1e1e1e;
+  height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem 20px;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.heading p {
+  color: #e1dfec80;
 }

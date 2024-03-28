@@ -16,6 +16,7 @@ export const AuthProvider = ({ children }) => {
       ? jwtDecode(localStorage.getItem("authTokens"))
       : null
   );
+  const [userProfile, setUserProfile] = useState();
   const [loading, setLoading] = useState(true);
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
@@ -157,12 +158,13 @@ export const AuthProvider = ({ children }) => {
       setAuthTokens(data);
       setUser(jwtDecode(data.access));
       localStorage.setItem("authTokens", JSON.stringify(data));
+      userDetails();
 
       if (data.kyc_verified) {
         setShowAlert(true);
         setAlertMessage("Login Successful");
         setAlertSeverity("success");
-        navigate("/dashboard");
+        navigate("/dashboard/home");
       } else {
         setShowAlert(true);
         setAlertMessage("KYC Verification Pending");
@@ -206,6 +208,30 @@ export const AuthProvider = ({ children }) => {
 
     if (loading) {
       setLoading(false);
+    }
+  };
+
+  // ============================================== User ======================================
+  const userDetails = async () => {
+    try {
+      const response = await fetch(
+        `https://crest-backend.onrender.com/api/users/${user.user_id}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const data = await response.json();
+
+      if (response.status === 200) {
+        setUserProfile(data);
+      } else {
+        console.error("Failed to fetch user details:", response.statusText);
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -256,12 +282,17 @@ export const AuthProvider = ({ children }) => {
         updateToken();
       }
     }, mins);
+    if (user) {
+      userDetails();
+    }
     return () => clearInterval(interval);
-  }, [authTokens, loading]);
+  }, [authTokens, loading, user]);
 
   const contextData = {
     authTokens,
     user,
+    userProfile,
+    userDetails,
     registerUser,
     loginUser,
     logoutUser,

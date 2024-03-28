@@ -7,16 +7,18 @@ import { BiMoneyWithdraw } from "react-icons/bi";
 import { MdOutlinePeopleAlt } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 
-import Logo from "../../assets/logo2.png"
+import Logo from "../../assets/CREST HOLDINGS LTD TRANSPARENT BRAND LOGO 2.png"
 import './Sidebar.css';
 
 const SidebarMenu = () => {
   return (
     <>
-      <div className='sidebar'>
+      <div className='sidebar left-sidebar'>
         <div className="sidebar-container">
           <div className="sidebar-logo">
-            <img src={Logo} alt="logo" />
+            <Link to={"/"}>
+              <img src={Logo} alt="logo" />
+            </Link>
           </div>
 
           <div className="sidebar-link-list">
@@ -24,54 +26,54 @@ const SidebarMenu = () => {
               to="home"
               className={({ isActive }) =>
                 isActive ? "sidebar-link active" : "sidebar-link"
-            }
+              }
             >
-              <GoHome/>
+              <GoHome />
               <span>Dashboard</span>
             </NavLink>
             <NavLink
-              to="/investment"
+              to="investment"
               className={({ isActive }) =>
                 isActive ? "sidebar-link active" : "sidebar-link"
-            }
+              }
             >
-              <BiBarChartAlt2/>
+              <BiBarChartAlt2 />
               <span>Investment</span>
             </NavLink>
             <NavLink
-              to="/deposit"
+              to="deposit"
               className={({ isActive }) =>
                 isActive ? "sidebar-link active" : "sidebar-link"
-            }
+              }
             >
-              <IoWalletOutline/>
+              <IoWalletOutline />
               <span>Deposit</span>
             </NavLink>
             <NavLink
-              to="/withdraw"
+              to="withdraw"
               className={({ isActive }) =>
                 isActive ? "sidebar-link active" : "sidebar-link"
-            }
+              }
             >
-              <BiMoneyWithdraw/>
+              <BiMoneyWithdraw />
               <span>Withdraw</span>
             </NavLink>
             <NavLink
-              to="/referral"
+              to="refferal"
               className={({ isActive }) =>
                 isActive ? "sidebar-link active" : "sidebar-link"
-            }
+              }
             >
-              <MdOutlinePeopleAlt/>
+              <MdOutlinePeopleAlt />
               <span>Referral</span>
             </NavLink>
             <NavLink
-              to="/settings"
+              to="setting"
               className={({ isActive }) =>
                 isActive ? "sidebar-link active" : "sidebar-link"
-            }
+              }
             >
-              <IoSettingsOutline/>
+              <IoSettingsOutline />
               <span>Settings</span>
             </NavLink>
           </div>
