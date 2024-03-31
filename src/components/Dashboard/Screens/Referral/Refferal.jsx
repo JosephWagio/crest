@@ -2,7 +2,7 @@ import React from 'react'
 
 const Referral = () => {
   return (
-    <div>Refferal</div>
+    <div className='main-container'>Refferal</div>
   )
 }
 

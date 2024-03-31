@@ -101,7 +101,7 @@ const LoginForm = () => {
                             </div>
                             <div id="input__field">
                                 <label>Password</label>
-                                <input type="text" name="password" placeholder="12345!$%" />
+                                <input type="password" name="password" placeholder="12345!$%" />
                             </div>
                             <FormControlLabel
                                 control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
