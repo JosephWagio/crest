@@ -9,7 +9,7 @@ import ProfileSideBar from '../components/Dashboard/ProfileSideBar'
 import { useState } from 'react'
 
 const Dashboard = () => {
-    const [closebar, setClosebar] = useState(false)
+    const [closebar, setClosebar] = useState(true)
     const handleCloseSidebar = () => {
         setClosebar((prev) => !prev)
     }
