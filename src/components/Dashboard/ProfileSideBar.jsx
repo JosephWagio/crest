@@ -9,7 +9,7 @@ const ProfileSideBar = () => {
   // console.log(userProfile)
 
   return (
-    <div className='sidebar right-sidebar'>
+    <div className='profile__sidebar right-sidebar'>
       <div className="profile-bar__container">
         <div className='profile-bar__head'>
           <img src={authTokens.profile_picture} alt="Profile__Picture" width={100} />

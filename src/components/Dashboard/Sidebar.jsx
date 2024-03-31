@@ -9,15 +9,19 @@ import { IoSettingsOutline } from "react-icons/io5";
 
 import Logo from "../../assets/CREST HOLDINGS LTD TRANSPARENT BRAND LOGO 2.png"
 import './Sidebar.css';
+import { CiMenuFries } from 'react-icons/ci';
 
-const SidebarMenu = () => {
+const SidebarMenu = ({ closebar, handleCloseSidebar }) => {
   return (
     <>
-      <div className='sidebar left-sidebar'>
+      <div className={closebar ? 'sidebar-close' : 'sidebar'}>
         <div className="sidebar-container">
+          <div className='close-sider-button-mobile' onClick={handleCloseSidebar} >
+            <CiMenuFries />
+          </div>
           <div className="sidebar-logo">
             <Link to={"/"}>
-              <img src={Logo} alt="logo" />
+              <img src={Logo} alt="logo" className={closebar ? 'sidebar-logo-img-close' : 'sidebar-logo-img'} />
             </Link>
           </div>
 
@@ -29,7 +33,7 @@ const SidebarMenu = () => {
               }
             >
               <GoHome />
-              <span>Dashboard</span>
+              <span className={closebar ? 'sidebar-link-close' : 'sidebar-link-span'}>Dashboard</span>
             </NavLink>
             <NavLink
               to="investment"
@@ -38,7 +42,7 @@ const SidebarMenu = () => {
               }
             >
               <BiBarChartAlt2 />
-              <span>Investment</span>
+              <span className={closebar ? 'sidebar-link-close' : 'sidebar-link-span'}>Investment</span>
             </NavLink>
             <NavLink
               to="deposit"
@@ -47,7 +51,7 @@ const SidebarMenu = () => {
               }
             >
               <IoWalletOutline />
-              <span>Deposit</span>
+              <span className={closebar ? 'sidebar-link-close' : 'sidebar-link-span'}>Deposit</span>
             </NavLink>
             <NavLink
               to="withdraw"
@@ -56,7 +60,7 @@ const SidebarMenu = () => {
               }
             >
               <BiMoneyWithdraw />
-              <span>Withdraw</span>
+              <span className={closebar ? 'sidebar-link-close' : 'sidebar-link-span'}>Withdraw</span>
             </NavLink>
             <NavLink
               to="refferal"
@@ -65,7 +69,7 @@ const SidebarMenu = () => {
               }
             >
               <MdOutlinePeopleAlt />
-              <span>Referral</span>
+              <span className={closebar ? 'sidebar-link-close' : 'sidebar-link-span'}>Referral</span>
             </NavLink>
             <NavLink
               to="setting"
@@ -74,11 +78,11 @@ const SidebarMenu = () => {
               }
             >
               <IoSettingsOutline />
-              <span>Settings</span>
+              <span className={closebar ? 'sidebar-link-close' : 'sidebar-link-span'}>Settings</span>
             </NavLink>
           </div>
         </div>
-      </div>
+      </div >
     </>
   )
 }

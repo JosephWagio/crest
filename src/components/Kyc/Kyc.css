@@ -143,3 +143,205 @@
   height: 100%;
   border-radius: 20px;
 }
+
+@media screen and (max-width: 322px) {
+  .kyc__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 2rem 1rem;
+    width: 95%;
+    height: 80vh;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffd700b2;
+  }
+  .kyc__card-btn button {
+    padding: 0.7rem 1rem;
+    border-radius: 7px;
+    border: none;
+    color: var(--color-white);
+    font-weight: 600;
+    background: #000;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 10px;
+  }
+  .step3__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-white);
+    height: 210px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .step3__input svg {
+    width: 50px;
+    height: 50px;
+    fill: #858585;
+  }
+  .step3__input span {
+    color: #858585;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .step2 p {
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .kyc__card-btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .kyc__card-btns a {
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 11px;
+    text-decoration: underline;
+  }
+  .kyc__card-head h2 {
+    color: var(--color-white);
+    font-size: 20px;
+  }
+  .kyc__card-head img {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 323px) and (max-width: 376px) {
+  .kyc__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 2rem 1.5rem;
+    width: 95%;
+    height: 85vh;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffd700b2;
+  }
+  .kyc__card-btn button {
+    padding: 0.7rem 1rem;
+    border-radius: 7px;
+    border: none;
+    color: var(--color-white);
+    font-weight: 600;
+    background: #000;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 10px;
+  }
+  .step3__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-white);
+    height: 220px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .step2 p {
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .kyc__card-btns a {
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  .step3__input svg {
+    width: 50px;
+    height: 50px;
+    fill: #858585;
+  }
+  .step3__input span {
+    color: #858585;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 426px) {
+  .kyc__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 2rem 1.5rem;
+    width: 95%;
+    height: 90vh;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffd700b2;
+  }
+  .kyc__card-btn button {
+    padding: 0.7rem 1rem;
+    border-radius: 7px;
+    border: none;
+    color: var(--color-white);
+    font-weight: 600;
+    background: #000;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .step3__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-white);
+    height: 220px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .step2 p {
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .kyc__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 2rem 2rem;
+    width: 70%;
+    height: 95vh;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffd700b2;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .kyc__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 2rem 2rem;
+    width: 70%;
+    height: 85vh;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffd700b2;
+  }
+}

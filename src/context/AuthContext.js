@@ -115,8 +115,8 @@ export const AuthProvider = ({ children }) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          firstname: e.target.name.value,
-          lastname: e.target.name.value,
+          firstname: e.target.firstname.value,
+          lastname: e.target.lastname.value,
           email: e.target.email.value,
           password: e.target.password.value,
         }),
@@ -259,7 +259,7 @@ export const AuthProvider = ({ children }) => {
         setShowAlert(true);
         setAlertMessage("Login Successful");
         setAlertSeverity("success");
-        navigate("/dashboard");
+        navigate("/dashboard/home");
       } else {
         const data = await response.json();
         setShowAlert(true);
