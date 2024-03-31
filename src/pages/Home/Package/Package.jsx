@@ -14,52 +14,56 @@ const Package = () => {
         <div className="plans">
           <p>Basic Plan</p>
           <h2>300 %</h2>
-          <p>20 Days / 1 Times</p>
+          <p>30 Days / 1 Times</p>
           <h3>Features</h3>
           <ul>
-            <li><IoMdCheckmarkCircleOutline/>   Minimum Investment-$1000</li>
-            <li><IoMdCheckmarkCircleOutline/>   Maximum Investment-$1000</li>
-            <li><IoMdCheckmarkCircleOutline/>   Capital Will Store</li>
-            <li><IoMdCheckmarkCircleOutline/>   24/7 Support</li>
+            <li><IoMdCheckmarkCircleOutline />   Minimum Investment-$500</li>
+            <li><IoMdCheckmarkCircleOutline />   Maximum Investment-$999</li>
+            <li><IoMdCheckmarkCircleOutline />   Minimum Earning-$1500</li>
+            <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
+            <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
           <button>Invest Now</button>
         </div>
         <div className="plans">
-          <p>Basic Plan</p>
-          <h2>300 %</h2>
-          <p>20 Days / 1 Times</p>
+          <p>Standard Plan</p>
+          <h2>400 %</h2>
+          <p>30 Days / 1 Times</p>
           <h3>Features</h3>
           <ul>
-            <li><IoMdCheckmarkCircleOutline/>   Minimum Investment-$1000</li>
-            <li><IoMdCheckmarkCircleOutline/>   Maximum Investment-$1000</li>
-            <li><IoMdCheckmarkCircleOutline/>   Capital Will Store</li>
-            <li><IoMdCheckmarkCircleOutline/>   24/7 Support</li>
+            <li><IoMdCheckmarkCircleOutline />   Minimum Investment-$1000</li>
+            <li><IoMdCheckmarkCircleOutline />   Maximum Investment-$4999</li>
+            <li><IoMdCheckmarkCircleOutline />   Minimum Earning-$4000</li>
+            <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
+            <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
           <button>Invest Now</button>
         </div>
         <div className="plans">
-          <p>Basic Plan</p>
-          <h2>300 %</h2>
-          <p>20 Days / 1 Times</p>
+          <p>Regular Plan</p>
+          <h2>500 %</h2>
+          <p>30 Days / 1 Times</p>
           <h3>Features</h3>
           <ul>
-            <li><IoMdCheckmarkCircleOutline/>   Minimum Investment-$1000</li>
-            <li><IoMdCheckmarkCircleOutline/>   Maximum Investment-$1000</li>
-            <li><IoMdCheckmarkCircleOutline/>   Capital Will Store</li>
-            <li><IoMdCheckmarkCircleOutline/>   24/7 Support</li>
+            <li><IoMdCheckmarkCircleOutline />   Minimum Investment-$5000</li>
+            <li><IoMdCheckmarkCircleOutline />   Maximum Investment-$99999</li>
+            <li><IoMdCheckmarkCircleOutline />   Minimum Earning-$25000</li>
+            <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
+            <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
           <button>Invest Now</button>
         </div>
         <div className="plans">
-          <p>Basic Plan</p>
-          <h2>300 %</h2>
-          <p>20 Days / 1 Times</p>
+          <p>Premium Plan</p>
+          <h2>500 %</h2>
+          <p>30 Days / 1 Times</p>
           <h3>Features</h3>
           <ul>
-            <li><IoMdCheckmarkCircleOutline/>   Minimum Investment-$1000</li>
-            <li><IoMdCheckmarkCircleOutline/>   Maximum Investment-$1000</li>
-            <li><IoMdCheckmarkCircleOutline/>   Capital Will Store</li>
-            <li><IoMdCheckmarkCircleOutline/>   24/7 Support</li>
+            <li><IoMdCheckmarkCircleOutline />   Minimum Investment-$100000</li>
+            <li><IoMdCheckmarkCircleOutline />   Maximum Investment-$500000</li>
+            <li><IoMdCheckmarkCircleOutline />   Minimum Earning-$500000</li>
+            <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
+            <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
           <button>Invest Now</button>
         </div>
