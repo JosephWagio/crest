@@ -100,11 +100,6 @@ a {
   width: 700px;
 }
 
-/* .tradingview-widget-container__widget {
-  width: 100%;
-  height: 40vh;
-} */
-
 @media screen and (max-width: 1025px) {
   .top-ellipse img {
     width: 700px;
