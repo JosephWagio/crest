@@ -29,10 +29,10 @@ const TradingViewTickerTape = () => {
   }, []);
 
   return (
-    <div className="tradingviewticker-widget-container" id="tradingviewticker-widget-container">
-
-    </div>
+    <div className="tradingviewticker-widget-container" id="tradingviewticker-widget-container"></div>
   );
 };
 
 export default TradingViewTickerTape;
+
+
