@@ -178,6 +178,9 @@ ul li {
 		height: 100px;
 		width: 170px;
 	}
+	.navbar-menu_container-links-signup {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 450px) {
@@ -187,5 +190,8 @@ ul li {
 	.navbar-links_logo img {
 		height: 80px;
 		width: 150px;
+	}
+	.navbar-menu_container-links-signup {
+		display: flex;
 	}
 }
