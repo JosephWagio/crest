@@ -30,7 +30,37 @@ const AdminUserTransactions = ({ handleCloseSidebar }) => {
             }
             else {
                 const errorData = await response.json();
-                const errorMessage = errorData.error || "Deposit failed";
+                const errorMessage = errorData.error || "Approval failed";
+                console.log(errorMessage)
+                setShowAlert(true);
+                setAlertMessage(errorMessage)
+                setAlertSeverity("error");
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const handleDeclineTransaction = async (id, e) => {
+        try {
+            e.preventDefault()
+            const formData = new FormData();
+            formData.append("status", "declined");
+
+            const response = await fetch(`https://crestbackend.up.railway.app/api/transaction/${id}`,
+                {
+                    method: "PATCH",
+                    body: formData
+                }
+            )
+            if (response.ok) {
+                setShowAlert(true);
+                setAlertMessage("Transaction Declined");
+                setAlertSeverity("success");
+            }
+            else {
+                const errorData = await response.json();
+                const errorMessage = errorData.error || "Declined failed";
                 console.log(errorMessage)
                 setShowAlert(true);
                 setAlertMessage(errorMessage)
@@ -88,14 +118,14 @@ const AdminUserTransactions = ({ handleCloseSidebar }) => {
                             {transaction.status === "pending" && (
                                 <div className='users__transactions-btns'>
                                     <button onClick={(e) => handleApproveTransaction(transaction.id, e)}>approve</button>
-                                    <button>decline</button>
+                                    <button onClick={(e) => handleDeclineTransaction(transaction.id, e)}> decline</button>
                                 </div>
                             )}
                         </div>
                     ))}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
