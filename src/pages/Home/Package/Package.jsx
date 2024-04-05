@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 import './Package.css';
+import AuthContext from '../../../context/AuthContext';
+import { Link } from 'react-router-dom';
 
 const Package = () => {
+  const { user } = useContext(AuthContext)
   return (
     <div className='package section__padding' id='plans'>
       <div className='package-header'>
@@ -23,7 +26,19 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-          <button>Invest Now</button>
+          {user ? user.is_superuser ? (
+            <Link to={"/admin/users"}>
+              <button>Invest Now</button>
+            </Link>
+          ) : (
+            <Link to={"/dashboard/investment"}>
+              <button>Invest Now</button>
+            </Link>
+          ) : (
+            <Link to={"/signin"}>
+              <button>Invest Now</button>
+            </Link>
+          )}
         </div>
         <div className="plans">
           <p>Standard Plan</p>
@@ -37,7 +52,19 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-          <button>Invest Now</button>
+          {user ? user.is_superuser ? (
+            <Link to={"/admin/users"}>
+              <button>Invest Now</button>
+            </Link>
+          ) : (
+            <Link to={"/dashboard/investment"}>
+              <button>Invest Now</button>
+            </Link>
+          ) : (
+            <Link to={"/signin"}>
+              <button>Invest Now</button>
+            </Link>
+          )}
         </div>
         <div className="plans">
           <p>Regular Plan</p>
@@ -51,7 +78,19 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-          <button>Invest Now</button>
+          {user ? user.is_superuser ? (
+            <Link to={"/admin/users"}>
+              <button>Invest Now</button>
+            </Link>
+          ) : (
+            <Link to={"/dashboard/investment"}>
+              <button>Invest Now</button>
+            </Link>
+          ) : (
+            <Link to={"/signin"}>
+              <button>Invest Now</button>
+            </Link>
+          )}
         </div>
         <div className="plans">
           <p>Premium Plan</p>
@@ -65,7 +104,19 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-          <button>Invest Now</button>
+          {user ? user.is_superuser ? (
+            <Link to={"/admin/users"}>
+              <button>Invest Now</button>
+            </Link>
+          ) : (
+            <Link to={"/dashboard/investment"}>
+              <button>Invest Now</button>
+            </Link>
+          ) : (
+            <Link to={"/signin"}>
+              <button>Invest Now</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

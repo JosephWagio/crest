@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import "./AboutUs.css";
@@ -7,8 +7,10 @@ import Choose from "../../../assets/6218785-Photoroom.png-Photoroom.png";
 import Check from "../../../assets/check.png";
 import MiddleEllipse from "../../../assets/Ellipse 3.png";
 import BottomEllipse from "../../../assets/Ellipse 4.png";
+import AuthContext from "../../../context/AuthContext";
 
 const AboutUs = () => {
+	const { user } = useContext(AuthContext)
 	return (
 		<div className="aboutus section__padding" id="aboutus">
 			<div className="aboutus-main">
@@ -30,9 +32,19 @@ const AboutUs = () => {
 							industry. Discover how our relentless pursuit of excellence has
 							shaped our success story.
 						</p>
-						<Link to="/signin">
-							Learn More <img src={Arrow} alt="arrow" />
-						</Link>
+						{user ? user.is_superuser ? (
+							<Link to="/admin/users">
+								Learn More <img src={Arrow} alt="arrow" />
+							</Link>
+						) : (
+							<Link to="/dashboard/home">
+								Learn More <img src={Arrow} alt="arrow" />
+							</Link>
+						) : (
+							<Link to="/signin">
+								Learn More <img src={Arrow} alt="arrow" />
+							</Link>
+						)}
 					</div>
 					<div className="vision">
 						<h3>Our Mission</h3>
@@ -42,9 +54,19 @@ const AboutUs = () => {
 							We're committed to providing innovative solutions that empower
 							individuals and businesses to thrive in the digital economy.
 						</p>
-						<Link to="/signin">
-							Learn More <img src={Arrow} alt="arrow" />
-						</Link>
+						{user ? user.is_superuser ? (
+							<Link to="/admin/users">
+								Learn More <img src={Arrow} alt="arrow" />
+							</Link>
+						) : (
+							<Link to="/dashboard/home">
+								Learn More <img src={Arrow} alt="arrow" />
+							</Link>
+						) : (
+							<Link to="/signin">
+								Learn More <img src={Arrow} alt="arrow" />
+							</Link>
+						)}
 					</div>
 					<div className="vision">
 						<h3>Our Team</h3>
@@ -55,9 +77,19 @@ const AboutUs = () => {
 							and bios, offer insights into their expertise, experience, and
 							contributions to the company's growth and success.
 						</p>
-						<Link to="/signin">
-							Learn More <img src={Arrow} alt="arrow" />
-						</Link>
+						{user ? user.is_superuser ? (
+							<Link to="/admin/users">
+								Learn More <img src={Arrow} alt="arrow" />
+							</Link>
+						) : (
+							<Link to="/dashboard/home">
+								Learn More <img src={Arrow} alt="arrow" />
+							</Link>
+						) : (
+							<Link to="/signin">
+								Learn More <img src={Arrow} alt="arrow" />
+							</Link>
+						)}
 					</div>
 				</div>
 				<div className="bottom-ellipse">
@@ -75,7 +107,19 @@ const AboutUs = () => {
 						Crest Holdings LTD
 					</p>
 					<button className="button">
-						<Link to="/signin">Learn More</Link>
+						{user ? user.is_superuser ? (
+							<Link to="/admin/users">
+								Learn More
+							</Link>
+						) : (
+							<Link to="/dashboard/home">
+								Learn More
+							</Link>
+						) : (
+							<Link to="/signin">
+								Learn More
+							</Link>
+						)}
 					</button>
 					<ul>
 						<li>

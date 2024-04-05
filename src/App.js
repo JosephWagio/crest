@@ -10,6 +10,7 @@ import ConfirmationMail from "./pages/ConfirmationMail";
 import PrivateRoutes from "./utils/PrivateRoutes";
 import Dashboard from "./pages/Dashboard";
 import Kyc from "./pages/Kyc";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route element={<PrivateRoutes />}>
               <Route path="/dashboard/*" element={<Dashboard />} />
               <Route path="/kyc-verification" element={<Kyc />} />
+              <Route path="/admin/*" element={<AdminDashboard />} />
             </Route>
           </Routes>
         </AuthProvider>
