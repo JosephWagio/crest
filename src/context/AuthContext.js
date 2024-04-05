@@ -62,10 +62,6 @@ export const AuthProvider = ({ children }) => {
       if (file.size <= 10 * 1024 * 1024) {
         setAddressDocument(file);
 
-        // setFormData({
-        //   ...formData,
-        //   addressDocument: file,
-        // });
         setShowAlert(false);
       } else {
         setShowAlert(true);
@@ -105,34 +101,38 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
 
   const registerUser = async (e) => {
-    e.preventDefault();
-    console.log("Student Created");
-    let response = await fetch(
-      "https://crest-backend.onrender.com/api/signup",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstname: e.target.firstname.value,
-          lastname: e.target.lastname.value,
-          email: e.target.email.value,
-          password: e.target.password.value,
-        }),
-      }
-    );
-    // const data = await response.json();
+    try {
+      e.preventDefault();
+      console.log("Student Created");
+      let response = await fetch(
+        "https://crest-backend.onrender.com/api/signup/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            first_name: e.target.firstname.value,
+            last_name: e.target.lastname.value,
+            email: e.target.email.value,
+            password: e.target.password.value,
+          }),
+        }
+      );
+      // const data = await response.json();
 
-    if (response.status === 201) {
-      setShowAlert(true);
-      setAlertMessage("Account created successfully!");
-      setAlertSeverity("success");
-      navigate("/confirmation-mail");
-    } else {
-      setShowAlert(true);
-      setAlertMessage("Request Failed something happened");
-      setAlertSeverity("error");
+      if (response.status === 201) {
+        setShowAlert(true);
+        setAlertMessage("Account created successfully!");
+        setAlertSeverity("success");
+        navigate("/confirmation-mail");
+      } else {
+        setShowAlert(true);
+        setAlertMessage("Request Failed something happened");
+        setAlertSeverity("error");
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -215,7 +215,7 @@ export const AuthProvider = ({ children }) => {
   const userDetails = async () => {
     try {
       const response = await fetch(
-        `https://crest-backend.onrender.com/api/users/${user.user_id}`,
+        `https://crest-backend.onrender.com/api/user_profile/${user.user_id}`,
         {
           method: "GET",
           headers: {
@@ -230,9 +230,7 @@ export const AuthProvider = ({ children }) => {
       } else {
         console.error("Failed to fetch user details:", response.statusText);
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   // =============================================== KYC ======================================
@@ -286,7 +284,7 @@ export const AuthProvider = ({ children }) => {
       userDetails();
     }
     return () => clearInterval(interval);
-  }, [authTokens, loading, user]);
+  }, [authTokens, loading, user, userDetails]);
 
   const contextData = {
     authTokens,
@@ -300,6 +298,8 @@ export const AuthProvider = ({ children }) => {
     alertMessage,
     alertSeverity,
     setShowAlert,
+    setAlertMessage,
+    setAlertSeverity,
 
     // KYC
     step,

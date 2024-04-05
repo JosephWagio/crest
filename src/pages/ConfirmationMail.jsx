@@ -7,7 +7,7 @@ import Mail from "../assets/mail.png"
 
 const ConfirmationMail = () => {
     return (
-        <div>
+        <div className='confirm__mail-body'>
             <Navbar />
             <div className='page__gradient'>
                 <div className='confirm__mail-container'>

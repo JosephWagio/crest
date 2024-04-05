@@ -47,6 +47,7 @@
 .heading h2 {
   font-weight: 500;
   font-size: 26px;
+  color: var(--color-golden);
 }
 .heading div {
   display: flex;
@@ -76,13 +77,6 @@
   color: #fff;
   font-weight: 500;
   font-size: 26px;
-}
-.main__content-assets-head a {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  color: var(--color-golden);
-  font-size: 15px;
 }
 
 .main__content-assets {
@@ -134,7 +128,7 @@
   font-size: 22px;
 }
 .asset__balance p {
-  font-size: 36px;
+  font-size: 28px;
 }
 .asset__bottom {
   display: flex;
@@ -168,6 +162,7 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   width: 100%;
+  height: 300px;
   border: 1px solid #fff;
   padding: 1rem 2rem 2rem;
   border-radius: 10px;
@@ -182,6 +177,8 @@
   color: #ffffff80;
   font-weight: 500;
   font-size: 14px;
+  border-bottom: #fff 1px solid;
+  padding-bottom: 1rem;
 }
 #trans,
 #transcoin {
@@ -226,6 +223,7 @@
 .main__content-activity-table__content p {
   font-size: 14px;
   color: #fff;
+  text-transform: capitalize;
 }
 .main__content-activity-table__content span {
   font-size: 14px;
@@ -235,7 +233,8 @@
   font-weight: 300;
 }
 .status {
-  color: #fff;
+  text-transform: capitalize;
+  color: #3edd87;
 }
 
 @media screen and (max-width: 322px) {
@@ -327,6 +326,22 @@
     color: #cabbb2;
     font-size: 14px;
   }
+
+  .main__content-activity-table__content p {
+    font-size: 10px;
+    color: #fff;
+  }
+  .main__content-activity-table__content span {
+    font-size: 10px;
+  }
+  .main__content-activity-table__head p {
+    color: #ffffff80;
+    font-weight: 500;
+    font-size: 10px;
+  }
+  .sidebar-link svg {
+    font-size: 17px;
+  }
 }
 
 @media screen and (min-width: 323px) and (max-width: 376px) {
@@ -402,6 +417,18 @@
     gap: 2rem;
     margin-top: 2rem;
   }
+  .main__content-activity-table__content p {
+    font-size: 10px;
+    color: #fff;
+  }
+  .main__content-activity-table__content span {
+    font-size: 10px;
+  }
+  .main__content-activity-table__head p {
+    color: #ffffff80;
+    font-weight: 500;
+    font-size: 10px;
+  }
 }
 
 @media screen and (min-width: 377px) and (max-width: 426px) {
@@ -414,7 +441,7 @@
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding: 2rem 15px;
+    padding: 2rem 10px;
   }
   .main__content {
     display: flex;
@@ -467,9 +494,28 @@
     font-weight: 500;
     color: var(--color-golden);
   }
+  .main__content-activity-table__content p {
+    font-size: 10px;
+    color: #fff;
+  }
+  .main__content-activity-table__content span {
+    font-size: 10px;
+  }
+  .main__content-activity-table__head p {
+    color: #ffffff80;
+    font-weight: 500;
+    font-size: 10px;
+  }
 }
 
 @media screen and (min-width: 427px) and (max-width: 769px) {
+  .main__content-activity-table__content p {
+    font-size: 12px;
+    color: #fff;
+  }
+  .main__content-activity-table__content span {
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {

@@ -1,0 +1,302 @@
+.deposit__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  width: 100%;
+}
+.deposit__container-head {
+  width: 100%;
+}
+.deposit__container-head h3 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+.deposit__container-deposit {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.deposit__container-deposit-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 60%;
+}
+.deposit__container-deposit-inner label {
+  color: #fff;
+  font-size: 14px;
+}
+.deposit__container-deposit-inner select {
+  padding: 0.8rem 1rem;
+  border-radius: 15px;
+  width: 100%;
+  background-color: #1a1a1b;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid var(--color-golden);
+}
+select {
+  appearance: none;
+}
+.deposit__container-deposit-inner select:focus {
+  outline-color: var(--color-golden);
+}
+.deposit__container-deposit-inner select option {
+  padding: 1rem;
+  font-size: 15px;
+}
+.deposit__container-deposit-inner input {
+  border-radius: 20px;
+  width: 100%;
+  color: #fff;
+  background-color: #1a1a1b;
+  padding: 0.8rem 1rem;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid var(--color-golden);
+}
+.deposit__container-deposit-inner input:focus {
+  outline-color: var(--color-golden);
+}
+.deposit__container-deposit-inner input::placeholder {
+  color: #a2a2a2;
+  font-size: 13px;
+}
+#wallet__address {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+  height: 3rem;
+  color: #fff;
+  background-color: #1a1a1b;
+  font-size: 14px;
+  border-radius: 20px;
+}
+#wallet__address svg {
+  cursor: pointer;
+  stroke: #3edd87;
+  font-size: 15px;
+}
+.deposit__container-deposit-tips {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #fff;
+  background-color: #1a1a1b;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 70%;
+}
+.deposit__container-deposit-tips h3 {
+  font-size: 14px;
+}
+.deposit__container-deposit-tips ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.deposit__container-deposit-tips ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 12px;
+  margin: 0;
+}
+.deposit__container-deposit-tips ul li svg {
+  fill: #3edd87;
+  height: 8px;
+  width: 8px;
+}
+.deposit__container-deposit-inner-btn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 60%;
+}
+.deposit__container-deposit-inner-btn button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--color-golden);
+  color: #fff;
+  transition: 0.3s;
+}
+.deposit__container-deposit-inner-btn button:hover {
+  background-color: #bb9f09;
+}
+
+@media screen and (max-width: 322px) {
+  .deposit__container-deposit-inner {
+    width: 100%;
+  }
+  .deposit__container-deposit-tips {
+    width: 100%;
+  }
+  .deposit__container-deposit-inner-btn {
+    width: 100%;
+  }
+  #wallet__address {
+    font-size: 7.5px;
+    font-weight: 600;
+  }
+  .deposit__container-deposit-inner input::placeholder {
+    color: #a2a2a2;
+    font-size: 12px;
+  }
+
+  .deposit__container-deposit-tips ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 10px;
+    margin: 0;
+  }
+  .deposit__container-deposit-inner select {
+    padding: 0.8rem 1rem;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #1a1a1b;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid var(--color-golden);
+    font-size: 13px;
+  }
+  .deposit__container-deposit-inner select option {
+    padding: 1rem;
+    font-size: 13px;
+  }
+  #wallet__address svg {
+    cursor: pointer;
+    stroke: #3edd87;
+    font-size: 14px;
+  }
+  .deposit__container-deposit-inner-btn button {
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--color-golden);
+    color: #fff;
+    transition: 0.3s;
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 323px) and (max-width: 376px) {
+  .deposit__container-deposit-inner {
+    width: 100%;
+  }
+  .deposit__container-deposit-tips {
+    width: 100%;
+  }
+  .deposit__container-deposit-inner-btn {
+    width: 100%;
+  }
+  #wallet__address {
+    font-size: 9.5px;
+    font-weight: 600;
+  }
+  .deposit__container-deposit-inner input::placeholder {
+    color: #a2a2a2;
+    font-size: 12px;
+  }
+
+  .deposit__container-deposit-tips ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 10px;
+    margin: 0;
+  }
+  .deposit__container-deposit-inner select {
+    padding: 0.8rem 1rem;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #1a1a1b;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid var(--color-golden);
+    font-size: 13px;
+  }
+  .deposit__container-deposit-inner select option {
+    padding: 1rem;
+    font-size: 13px;
+  }
+  #wallet__address svg {
+    cursor: pointer;
+    stroke: #3edd87;
+    font-size: 14px;
+  }
+  .deposit__container-deposit-inner-btn button {
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--color-golden);
+    color: #fff;
+    transition: 0.3s;
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 426px) {
+  .deposit__container-deposit-inner {
+    width: 100%;
+  }
+  .deposit__container-deposit-tips {
+    width: 100%;
+  }
+  .deposit__container-deposit-inner-btn {
+    width: 100%;
+  }
+  #wallet__address {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .deposit__container-deposit-inner input::placeholder {
+    color: #a2a2a2;
+    font-size: 12px;
+  }
+
+  .deposit__container-deposit-tips ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 11px;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .deposit__container-deposit-inner {
+    width: 80%;
+  }
+  .deposit__container-deposit-tips {
+    width: 90%;
+  }
+  .deposit__container-deposit-inner-btn {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .deposit__container-deposit-inner {
+    width: 75%;
+  }
+  .deposit__container-deposit-tips {
+    width: 80%;
+  }
+  .deposit__container-deposit-inner-btn {
+    width: 75%;
+  }
+}

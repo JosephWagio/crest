@@ -1,16 +1,33 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FiCopy } from "react-icons/fi";
 import { RiFacebookFill } from "react-icons/ri";
-import { FaInstagram, FaXTwitter,  } from "react-icons/fa6";
+import { FaInstagram, FaXTwitter, } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 import { FaTelegramPlane } from "react-icons/fa";
 import { LuDot } from "react-icons/lu";
 
 import './Referral.css';
+import { CiMenuFries } from 'react-icons/ci';
+import AuthContext from '../../../../context/AuthContext';
 
-const Referral = () => {
+const Referral = ({ handleCloseSidebar }) => {
+  const { userProfile } = useContext(AuthContext)
   return (
     <div className='main-container'>
+      <header className='main-container-nav'>
+        <div className='close-sider-button' onClick={handleCloseSidebar} >
+          <CiMenuFries />
+        </div>
+        <div className="heading">
+          <h2>Hello,</h2>
+          <div>
+            <h2>{userProfile && userProfile.user.first_name}</h2>
+            <h2>{userProfile && userProfile.user.last_name}</h2>
+          </div>
+          👋
+        </div>
+      </header>
+      
       <div className="referral-main">
         <div className="referral-header">
           <h3>Referral</h3>
