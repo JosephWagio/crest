@@ -18,11 +18,11 @@ const Dashboard = () => {
             <SidebarMenu closebar={closebar} handleCloseSidebar={handleCloseSidebar} />
             <Routes>
                 <Route path='home' element={<DashboardHome handleCloseSidebar={handleCloseSidebar} />} />
-                <Route path='investment' element={<Investment />} />
-                <Route path='deposit' element={<Deposit />} />
-                <Route path='withdraw' element={<Withdraw />} />
-                <Route path='refferal' element={<Referral />} />
-                <Route path='setting' element={<Settings />} />
+                <Route path='investment' element={<Investment handleCloseSidebar={handleCloseSidebar} />} />
+                <Route path='deposit' element={<Deposit handleCloseSidebar={handleCloseSidebar} />} />
+                <Route path='withdraw' element={<Withdraw handleCloseSidebar={handleCloseSidebar} />} />
+                <Route path='refferal' element={<Referral handleCloseSidebar={handleCloseSidebar} />} />
+                <Route path='setting' element={<Settings handleCloseSidebar={handleCloseSidebar} />} />
             </Routes>
             <ProfileSideBar />
         </div>

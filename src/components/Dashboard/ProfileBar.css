@@ -47,6 +47,7 @@
   text-transform: capitalize;
   color: var(--color-white);
   font-weight: 500;
+  text-transform: capitalize;
 }
 .profile-bar__head a {
   color: var(--color-golden);

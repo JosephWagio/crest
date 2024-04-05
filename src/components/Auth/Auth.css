@@ -186,6 +186,9 @@ form button:hover {
 }
 
 /* ================================= Confirm mail ============================== */
+.confirm__mail-body {
+  height: 100vh;
+}
 .confirm__mail-container {
   display: flex;
   align-items: center;

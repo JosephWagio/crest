@@ -1,0 +1,684 @@
+.investment__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  width: 100%;
+}
+.investment__container-head {
+  width: 100%;
+}
+.investment__container-head h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 22px;
+}
+.investment__container-plans {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: 100%;
+}
+.investment__container-plans::-webkit-scrollbar {
+  display: none;
+}
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+
+  border-radius: 10px;
+  background-color: #fff;
+  backdrop-filter: blur(40px);
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+.plan:hover {
+  background-color: var(--color-golden);
+}
+.plan div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  width: 100%;
+}
+.plan div h2 {
+  font-size: 19px;
+}
+.plan div p {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 600;
+}
+.plan div h3 {
+  font-size: 17px;
+}
+.plan ul {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.plan ul li {
+  display: flex;
+  align-items: center;
+  font-size: 12.5px;
+  gap: 0.2rem;
+  margin: 0;
+}
+.plan button {
+  padding: 1em 1.5rem;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.plan p:last-of-type {
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid;
+  border-color: #000;
+  text-align: center;
+  width: 100%;
+}
+
+.investment__container-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: 100%;
+  height: 300px;
+  border: 1px solid #fff;
+  padding: 1rem 2rem 2rem;
+  border-radius: 10px;
+}
+.investment__container-table__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.investment__container-table__head p {
+  color: #ffffff80;
+  font-weight: 500;
+  font-size: 14px;
+}
+#trans,
+#transcoin {
+  flex: 1;
+}
+#wallet {
+  flex: 1;
+  text-align: right;
+}
+#amount {
+  flex: 1;
+  text-align: right;
+}
+#start {
+  flex: 1.5;
+  text-align: right;
+}
+#end {
+  flex: 1.5;
+  text-align: right;
+}
+.main__content-activity-table__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__content-activity-table__content #transcoin {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.earning {
+  color: #3edd87;
+}
+.end_date {
+  color: #f46565;
+}
+.das__span {
+  color: #ffffff80;
+  font-weight: 300;
+}
+.status {
+  color: #fff;
+}
+
+.investment__box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1.5rem 1rem;
+  border-radius: 20px;
+  width: 500px;
+  background-color: #fff;
+}
+.investment__box h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 19px;
+}
+.investment__box select {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 1rem 0.5rem;
+  border-radius: 7px;
+  width: 100%;
+  border: 1.5px solid #e6dcee;
+}
+.investment__box select option {
+  padding: 1rem;
+}
+.investment__box select:focus {
+  outline-color: var(--color-golden);
+}
+.investment__box input {
+  padding: 1rem 0.5rem;
+  border-radius: 7px;
+  border: 1.5px solid #e6dcee;
+  width: 100%;
+}
+.investment__box input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+}
+.investment__box input:focus {
+  outline-color: var(--color-golden);
+}
+.invest-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.invest-btns button:first-child {
+  background-color: #8c0000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.invest-btns button:first-child:hover {
+  background-color: #ac0404;
+}
+.invest-btns button:last-child {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--color-golden);
+  transition: 0.3s;
+}
+.invest-btns button:last-child:hover {
+  background-color: #bb9f09;
+}
+
+@media screen and (max-width: 322px) {
+  .investment__container-plans {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+  }
+
+  .investment__container-table {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 0.8rem 0.6rem;
+    border-radius: 10px;
+  }
+
+  .investment__container-table__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .investment__container-table__head p {
+    font-size: 10px;
+  }
+
+  #trans,
+  #transcoin {
+    flex: 1.5;
+  }
+  #wallet {
+    flex: 0.8;
+    text-align: right;
+  }
+  #amount {
+    flex: 0.8;
+    text-align: right;
+  }
+  #start {
+    flex: 1.5;
+    text-align: right;
+  }
+  #end {
+    flex: 1.5;
+    text-align: right;
+  }
+
+  .das__span {
+    font-size: 13px;
+  }
+  .status {
+    font-size: 13px;
+  }
+
+  .investment__container-head h2 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .investment__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .plan div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .plan div p {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .plan div h2 {
+    font-size: 16px;
+  }
+  .plan div h3 {
+    font-size: 16px;
+  }
+  .plan p:last-of-type {
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid;
+    border-color: #000;
+    text-align: center;
+    width: 100%;
+  }
+  .plan button {
+    padding: 1em 1.5rem;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .investment__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+    width: 300px;
+    background-color: #fff;
+  }
+}
+
+@media screen and (min-width: 323px) and (max-width: 376px) {
+  .investment__container-plans {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+  }
+
+  .investment__container-table {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 0.8rem 0.6rem;
+    border-radius: 10px;
+  }
+
+  .investment__container-table__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .investment__container-table__head p {
+    font-size: 10px;
+  }
+
+  #trans,
+  #transcoin {
+    flex: 1.5;
+  }
+  #wallet {
+    flex: 0.8;
+    text-align: right;
+  }
+  #amount {
+    flex: 0.8;
+    text-align: right;
+  }
+  #start {
+    flex: 1.5;
+    text-align: right;
+  }
+  #end {
+    flex: 1.5;
+    text-align: right;
+  }
+
+  .das__span {
+    font-size: 13px;
+  }
+  .status {
+    font-size: 13px;
+  }
+
+  .investment__container-head h2 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .investment__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .plan div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .plan div p {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .plan div h2 {
+    font-size: 16px;
+  }
+  .plan div h3 {
+    font-size: 16px;
+  }
+  .plan p:last-of-type {
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid;
+    border-color: #000;
+    text-align: center;
+    width: 100%;
+  }
+  .plan button {
+    padding: 1em 1.5rem;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .investment__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+    width: 350px;
+    background-color: #fff;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 426px) {
+  .investment__container-head h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .investment__container-plans {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+  }
+
+  .investment__container-table {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 0.8rem 0.8rem;
+    border-radius: 10px;
+  }
+
+  .investment__container-table__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .investment__container-table__head p {
+    font-size: 10px;
+  }
+
+  #trans,
+  #transcoin {
+    flex: 1.5;
+  }
+  #wallet {
+    flex: 0.8;
+    text-align: right;
+  }
+  #amount {
+    flex: 0.8;
+    text-align: right;
+  }
+  #start {
+    flex: 1.5;
+    text-align: right;
+  }
+  #end {
+    flex: 1.5;
+    text-align: right;
+  }
+
+  .das__span {
+    font-size: 13px;
+  }
+  .status {
+    font-size: 13px;
+  }
+
+  .investment__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+    width: 400px;
+    background-color: #fff;
+  }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .investment__container-head h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .investment__container-plans {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+  }
+  .plan ul li {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap: 0.2rem;
+    margin: 0;
+  }
+
+  .investment__container-table__head p {
+    font-size: 13px;
+  }
+
+  #trans,
+  #transcoin {
+    flex: 1.5;
+  }
+  #wallet {
+    flex: 0.8;
+    text-align: right;
+  }
+  #amount {
+    flex: 0.8;
+    text-align: right;
+  }
+  #start {
+    flex: 1.5;
+    text-align: right;
+  }
+  #end {
+    flex: 1.5;
+    text-align: right;
+  }
+
+  .das__span {
+    font-size: 13px;
+  }
+  .status {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .investment__container-head h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .investment__container-plans {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+  }
+  .plan ul li {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap: 0.2rem;
+    margin: 0;
+  }
+
+  .investment__container-table__head p {
+    font-size: 13px;
+  }
+
+  #trans,
+  #transcoin {
+    flex: 1.5;
+  }
+  #wallet {
+    flex: 0.8;
+    text-align: right;
+  }
+  #amount {
+    flex: 0.8;
+    text-align: right;
+  }
+  #start {
+    flex: 1.5;
+    text-align: right;
+  }
+  #end {
+    flex: 1.5;
+    text-align: right;
+  }
+
+  .das__span {
+    font-size: 13px;
+  }
+  .status {
+    font-size: 13px;
+  }
+}
