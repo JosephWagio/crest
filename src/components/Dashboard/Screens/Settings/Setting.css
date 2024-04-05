@@ -1,0 +1,186 @@
+.settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-header {
+    margin-bottom: 3rem;
+}
+
+.settings-header h3 {
+    color: var(--color-golden);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.settings-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-profile-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.settings-profile-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-grey);
+    margin-bottom: 1rem;
+}
+
+.settings-user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.settings-user-info p {
+    font-family: var(--font-family);
+    color: #FFFFFF80;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 29px;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+.settings-user-info label {
+    font-family: var(--font-family);
+    color: #FFFFFF80;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    margin-right: .5rem;
+    margin-bottom: .2rem;
+}
+
+.user-info-field-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.user-info-field input[type="text"]{
+    width: 22rem;
+    padding: .8rem;
+    border-radius: 8px;
+    border: 1.5px solid #858585
+}
+
+.user-info-field input[type="password"],
+.user-info-field input[type="email"] {
+    width: 45rem;
+    padding: .8rem;
+    border-radius: 8px;
+    border: 1.5px solid #858585
+}
+
+.settings-user-info button {
+    align-self: flex-end;
+    margin-top: 1rem;
+}
+
+
+@media screen and (max-width: 1120px) {
+    .user-info-field input[type="text"]{
+        width: 18rem;
+    }
+
+    .user-info-field input[type="password"],
+    .user-info-field input[type="email"] {
+        width: 37rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+    .user-info-field input[type="text"]{
+        width: 15rem;
+    }
+
+    .user-info-field input[type="password"],
+    .user-info-field input[type="email"] {
+        width: 31rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .user-info-field input[type="text"]{
+        width: 13rem;
+    }
+
+    .user-info-field input[type="password"],
+    .user-info-field input[type="email"] {
+        width: 27rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .user-info-field-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .user-info-field input[type="text"]
+    .user-info-field input[type="password"],
+    .user-info-field input[type="email"]
+    {
+        width: 22rem;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    .settings-profile-picture img {
+        width: 180px;
+        height: 180px;
+    }
+    .user-info-field input[type="text"],
+    .user-info-field input[type="password"],
+    .user-info-field input[type="email"]{
+        width: 18rem;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .settings-header {
+        margin-bottom: 1.5rem;
+    }
+    .settings-profile-picture img {
+        width: 150px;
+        height: 150px;
+    }
+    .settings-user-info p {
+        font-size: 22px;
+    }
+    .settings-user-info label {
+        font-size: 14px;
+    }
+    .user-info-field {
+        margin-bottom: 1rem;
+    }
+    .user-info-field input[type="text"],
+    .user-info-field input[type="password"],
+    .user-info-field input[type="email"]{
+        width: 15rem;
+    }
+}
