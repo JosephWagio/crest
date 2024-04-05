@@ -6,9 +6,11 @@ const TradingViewTickerTape = () => {
 
  useEffect(() => {
     const script = document.createElement("script");
-    script.type = "text/javascript";
     script.src = "https://s3.tradingview.com/external-embedding/embed-widget-timeline.js";
     script.async = true;
+
+    script.setAttribute("crossorigin", "anonymous");
+
     script.innerHTML = JSON.stringify({
       feedMode: "all_symbols",
       isTransparent: true,
@@ -20,9 +22,9 @@ const TradingViewTickerTape = () => {
     });
 
    const container = document.getElementById("tradingviewticker-widget-container");
-    
+
     return () => {
-     if (container) {
+      if (container) {
         container.appendChild(script);
       }
     };
@@ -34,5 +36,3 @@ const TradingViewTickerTape = () => {
 };
 
 export default TradingViewTickerTape;
-
-

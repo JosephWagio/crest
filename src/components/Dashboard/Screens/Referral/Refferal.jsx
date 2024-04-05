@@ -5,6 +5,7 @@ import { FaInstagram, FaXTwitter, } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 import { FaTelegramPlane } from "react-icons/fa";
 import { LuDot } from "react-icons/lu";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import './Referral.css';
 import { CiMenuFries } from 'react-icons/ci';
@@ -41,7 +42,7 @@ const Referral = ({ handleCloseSidebar }) => {
           <div className='referral-link'>
             <p>Share link through Social Media</p>
             <div className="referral-link-input">
-              <input type="text" value={"https:/crestholdings/REFERRALCODE=yourlink"} />
+              <input type="text" value={"https://crestholdingsltd.com/"} />
               <FiCopy />
             </div>
             <div className='referral-link-socials'>

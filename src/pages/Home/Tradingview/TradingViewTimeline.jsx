@@ -8,6 +8,9 @@ const TradingViewTimeline = () => {
     script.type = "text/javascript";
     script.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
     script.async = true;
+
+    script.setAttribute("crossorigin", "anonymous");
+
     script.innerHTML = `
       {
         "symbols": [
