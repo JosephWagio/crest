@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
 import SignUp from "../../../assets/3d-render-smartphone-black-hands-with-finger-Photoroom.png-Photoroom.png";
@@ -6,6 +6,7 @@ import vector from "../../../assets/Vector.png";
 import MiddleEllipse from "../../../assets/Ellipse 3.png";
 import "./Features.css";
 import { Link } from "react-router-dom";
+import AuthContext from "../../../context/AuthContext";
 
 const Features = () => {
 	const bounceTransition = {
@@ -17,6 +18,8 @@ const Features = () => {
 		},
 	};
 
+	const { user } = useContext(AuthContext)
+
 	return (
 		<div className="features section__padding" id="features">
 			<div className="feature-content">
@@ -26,7 +29,15 @@ const Features = () => {
 						We have curated the finest features to enhance your {" "}
 						<span className="span">Investment</span> journey.
 					</p>
-					<button className="button"><Link to="/signin">Learn more</Link></button>
+					<button className="button">
+						{user ? user.is_superuser ? (
+							<Link to="/admin/users">Learn More</Link>
+						) : (
+							<Link to="/dashboard/home">Learn More</Link>
+						) : (
+							<Link to="/signin">Learn More</Link>
+						)}
+					</button>
 				</div>
 				<div className="feature-details">
 					<div className="details">
@@ -49,7 +60,7 @@ const Features = () => {
 						<h3>Diverse Investment Opportunities</h3>
 						<p>
 							Explore a wide range of{" "}
-							<span className="span">investment options</span>, 
+							<span className="span">investment options</span>,
 							from traditional stocks and bonds to alternative assets like
 							real estate investment trusts (REITs) and venture capital opportunities.
 						</p>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -11,6 +11,7 @@ import SOL from "../../../assets/ic_sol.png";
 import Ellipse2 from "../../../assets/Ellipse 2.png";
 
 import "./Header.css";
+import AuthContext from "../../../context/AuthContext";
 
 const Header = () => {
 	const bounceTransition = {
@@ -21,6 +22,8 @@ const Header = () => {
 			ease: "easeInOut",
 		},
 	};
+
+	const { user } = useContext(AuthContext)
 
 	return (
 		<div className="header section__padding">
@@ -36,7 +39,13 @@ const Header = () => {
 						. Join us on our journey to reshape the future of finance.
 					</p>
 					<button className="button">
-						<Link to="/signin">Get Started</Link>
+						{user ? user.is_superuser ? (
+							<Link to="/admin/users">Get Started</Link>
+						) : (
+							<Link to="/dashboard/home">Get Started</Link>
+						) : (
+							<Link to="/signin">Get Started</Link>
+						)}
 					</button>
 				</div>
 				<div className="header-img">
@@ -68,7 +77,7 @@ const Header = () => {
 					<img src={SOL} alt="sol" />
 				</div>
 			</div>
-		</div>
+		</div >
 	);
 };
 

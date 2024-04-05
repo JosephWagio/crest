@@ -29,6 +29,10 @@ export const AuthProvider = ({ children }) => {
   const [addressDocumentType, setAddressDocumentType] = useState("");
   const [addressDocument, setAddressDocument] = useState(null);
 
+  // Admin
+  const [allUsers, setAllUsers] = useState([]);
+  const [allTransactions, setAllTransactions] = useState([]);
+
   const fileInputRef = useRef(null);
   const addressFileInputRef = useRef(null);
 
@@ -105,7 +109,7 @@ export const AuthProvider = ({ children }) => {
       e.preventDefault();
       console.log("Student Created");
       let response = await fetch(
-        "https://crest-backend.onrender.com/api/signup/",
+        "https://crestbackend.up.railway.app/api/signup/",
         {
           method: "POST",
           headers: {
@@ -139,7 +143,7 @@ export const AuthProvider = ({ children }) => {
   const loginUser = async (e) => {
     e.preventDefault();
     let response = await fetch(
-      "https://crest-backend.onrender.com/api/signin/",
+      "https://crestbackend.up.railway.app/api/signin/",
       {
         method: "POST",
         headers: {
@@ -164,7 +168,11 @@ export const AuthProvider = ({ children }) => {
         setShowAlert(true);
         setAlertMessage("Login Successful");
         setAlertSeverity("success");
-        navigate("/dashboard/home");
+        if (data.is_superuser) {
+          navigate("/admin/users");
+        } else {
+          navigate("/dashboard/home");
+        }
       } else {
         setShowAlert(true);
         setAlertMessage("KYC Verification Pending");
@@ -187,7 +195,7 @@ export const AuthProvider = ({ children }) => {
 
   const updateToken = async () => {
     let response = await fetch(
-      "https://crest-backend.onrender.com/api/token/refresh/",
+      "https://crestbackend.up.railway.app/api/token/refresh/",
       {
         method: "POST",
         headers: {
@@ -215,7 +223,7 @@ export const AuthProvider = ({ children }) => {
   const userDetails = async () => {
     try {
       const response = await fetch(
-        `https://crest-backend.onrender.com/api/user_profile/${user.user_id}`,
+        `https://crestbackend.up.railway.app/api/user_profile/${user.user_id}`,
         {
           method: "GET",
           headers: {
@@ -227,6 +235,51 @@ export const AuthProvider = ({ children }) => {
 
       if (response.status === 200) {
         setUserProfile(data);
+      } else {
+        console.error("Failed to fetch user details:", response.statusText);
+      }
+    } catch (error) {}
+  };
+
+  const allUsersDetails = async () => {
+    try {
+      const response = await fetch(
+        "https://crestbackend.up.railway.app/api/user_profile/",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.status === 200) {
+        setAllUsers(data);
+      } else {
+        console.error("Failed to fetch user details:", response.statusText);
+      }
+    } catch (error) {}
+  };
+
+  const allUsersTransactions = async () => {
+    try {
+      const response = await fetch(
+        "https://crestbackend.up.railway.app/api/transaction/",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${authTokens.access}`,
+          },
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.status === 200) {
+        setAllTransactions(data);
       } else {
         console.error("Failed to fetch user details:", response.statusText);
       }
@@ -247,7 +300,7 @@ export const AuthProvider = ({ children }) => {
 
     try {
       const response = await fetch(
-        `https://crest-backend.onrender.com/api/users/${user.user_id}/`,
+        `https://crestbackend.up.railway.app/api/users/${user.user_id}/`,
         {
           method: "PATCH",
           body: formData,
@@ -323,6 +376,12 @@ export const AuthProvider = ({ children }) => {
     handleDropAddressDocument,
     handleAddressDocumentChange,
     handleAddressDocumentUpload,
+
+    // Admin
+    allUsersDetails,
+    allUsers,
+    allUsersTransactions,
+    allTransactions,
   };
 
   return (

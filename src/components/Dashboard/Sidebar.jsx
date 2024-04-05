@@ -1,17 +1,27 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { GoHome } from "react-icons/go";
 import { BiBarChartAlt2 } from "react-icons/bi";
 import { IoWalletOutline } from "react-icons/io5";
 import { BiMoneyWithdraw } from "react-icons/bi";
 import { MdOutlinePeopleAlt } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
+import { IoLogOut } from "react-icons/io5";
 
 import Logo from "../../assets/CREST HOLDINGS LTD TRANSPARENT BRAND LOGO 2.png"
 import './Sidebar.css';
 import { CiMenuFries } from 'react-icons/ci';
+import AuthContext from '../../context/AuthContext';
 
 const SidebarMenu = ({ closebar, handleCloseSidebar }) => {
+  const { logoutUser } = useContext(AuthContext)
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logoutUser()
+    navigate("/")
+  }
   return (
     <>
       <div className={closebar ? 'sidebar-close' : 'sidebar'}>
@@ -80,6 +90,11 @@ const SidebarMenu = ({ closebar, handleCloseSidebar }) => {
               <IoSettingsOutline />
               <span className={closebar ? 'sidebar-link-close' : 'sidebar-link-span'}>Settings</span>
             </NavLink>
+
+            <div className='logout-btn' onClick={handleLogout}>
+              <IoLogOut />
+              <span className={closebar ? 'sidebar-link-close' : 'sidebar-link-span'}>Logout</span>
+            </div>
           </div>
         </div>
       </div >
