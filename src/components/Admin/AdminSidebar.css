@@ -1,0 +1,316 @@
+.sidebar {
+  /* position: fixed; */
+  background-color: var(--color-black);
+  width: 269px;
+  height: 100%;
+  /* overflow-x: hidden; */
+  font-family: var(--font-family);
+  transition: 0.3s;
+  z-index: 10;
+}
+.sidebar-close {
+  width: fit-content;
+  height: 100%;
+  background-color: var(--color-black);
+  transition: 0.3s;
+}
+.close-sider-button-mobile {
+  display: none;
+}
+
+.left-sidebar {
+  left: 0;
+}
+
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0px .1rem; */
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.sidebar-logo-img {
+  width: 120px;
+  display: block;
+}
+.sidebar-logo-img-light {
+  display: block;
+  width: 170px;
+}
+.sidebar-logo-img-close {
+  display: none;
+}
+
+.sidebar-container {
+  padding: 2rem 3rem 0;
+  height: 100%;
+}
+
+.sidebar-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  margin-top: 5rem;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar-link.active {
+  color: var(--color-golden);
+}
+
+.sidebar-link svg {
+  font-size: 20px;
+}
+
+.sidebar-link-span {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -1px;
+  margin-left: 24px;
+  color: var(--color-white);
+}
+.sidebar-link-close {
+  display: none;
+}
+.logout-btn {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.72);
+  cursor: pointer;
+}
+.logout-btn svg {
+  fill: var(--color-golden);
+  font-size: 22px;
+}
+
+@media screen and (max-width: 322px) {
+  .sidebar {
+    position: fixed;
+    background-color: var(--color-black);
+    width: 210px;
+    height: 100%;
+    /* overflow-x: hidden; */
+    font-family: var(--font-family);
+    transition: 0.3s;
+    z-index: 10;
+  }
+  .sidebar-container {
+    position: relative;
+    padding: 2rem 1rem 0;
+    height: 100%;
+  }
+  .sidebar-link-span {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -1px;
+    margin-left: 20px;
+  }
+  .sidebar-link-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  .sidebar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px .1rem; */
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+  }
+  .close-sider-button-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20%;
+
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 323px) and (max-width: 376px) {
+  .sidebar {
+    position: fixed;
+    background-color: var(--color-black);
+    width: 210px;
+    height: 100%;
+    /* overflow-x: hidden; */
+    font-family: var(--font-family);
+    transition: 0.3s;
+    z-index: 10;
+  }
+  .sidebar-container {
+    position: relative;
+    padding: 2rem 1rem 0;
+    height: 100%;
+  }
+  .sidebar-link-span {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -1px;
+    margin-left: 20px;
+  }
+  .sidebar-link-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  .sidebar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px .1rem; */
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+  }
+  .close-sider-button-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20%;
+
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  .sidebar-link svg {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 426px) {
+  .sidebar {
+    position: fixed;
+    background-color: var(--color-black);
+    width: 210px;
+    height: 100%;
+    /* overflow-x: hidden; */
+    font-family: var(--font-family);
+    transition: 0.3s;
+    z-index: 10;
+  }
+  .sidebar-container {
+    position: relative;
+    padding: 2rem 1rem 0;
+    height: 100%;
+  }
+  .sidebar-link-span {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -1px;
+    margin-left: 20px;
+  }
+  .sidebar-link-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  .sidebar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px .1rem; */
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+  }
+  .close-sider-button-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20%;
+
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  .sidebar-link svg {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .sidebar {
+    /* position: fixed; */
+    background-color: var(--color-black);
+    width: 180px;
+    height: 100%;
+    /* overflow-x: hidden; */
+    font-family: var(--font-family);
+    transition: 0.3s;
+  }
+  .sidebar-container {
+    padding: 2rem 1.5rem 0;
+    height: 100%;
+  }
+  .sidebar-link-span {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -1px;
+    margin-left: 20px;
+  }
+  .close-sider-button-mobile {
+    display: none;
+  }
+  .main__content-activity-table__content p {
+    font-size: 12px;
+    color: #fff;
+  }
+  .main__content-activity-table__content span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    /* position: fixed; */
+    background-color: var(--color-black);
+    width: 210px;
+    height: 100%;
+    /* overflow-x: hidden; */
+    font-family: var(--font-family);
+    transition: 0.3s;
+  }
+  .sidebar-container {
+    padding: 2rem 2rem 0;
+    height: 100%;
+  }
+  .sidebar-link span {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -1px;
+    margin-left: 20px;
+  }
+  .close-sider-button-mobile {
+    display: none;
+  }
+}

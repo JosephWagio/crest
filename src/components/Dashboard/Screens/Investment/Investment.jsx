@@ -33,7 +33,7 @@ const Investment = ({ handleCloseSidebar }) => {
     try {
       e.preventDefault()
 
-      const response = await fetch("https://crest-backend.onrender.com/api/investment_sub/", {
+      const response = await fetch("https://crestbackend.up.railway.app/api/investment_sub/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

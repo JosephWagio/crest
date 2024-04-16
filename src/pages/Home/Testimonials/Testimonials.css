@@ -1,89 +1,89 @@
 .testimonials {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
 }
 
 .testimonial-header h1 {
-    font-family: var(--font-family);
-    color: var(--color-white);
-    text-align: center;
-    font-size: 35px;
-    font-weight: 500;
-    line-height: 70px;
-    margin-bottom: 2rem
+  font-family: var(--font-family);
+  color: var(--color-white);
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 70px;
+  margin-bottom: 2rem;
 }
 
 .testimonial-swiper {
-    padding: 10px;
-    background-color: #000;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
+  padding: 10px;
+  background-color: #000;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .img {
-    margin-right: 1rem;
-    padding: 5px;
+  margin-right: 1rem;
+  padding: 5px;
 }
 
 .img img {
-    width: 50px;
+  width: 50px;
 }
 
 .profile {
-    padding: 10px;
+  padding: 10px;
 }
 
 .profile h5 {
-    color: var(--color-white);
-    font-family: var(--font-family);
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 25px;
-    margin-bottom: .5rem;
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 0.5rem;
 }
 
 .profile h6 {
-    color: var(--color-white);
-    font-family: var(--font-family);
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 18px;
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
 }
 
-.content{
-    padding: 10px;
+.content {
+  padding: 10px;
 }
 
 .content p {
-    color: var(--color-white);
-    font-family: var(--font-family);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    margin-bottom: .5rem;
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 0.5rem;
 }
 
 .swiper-pagination-bullet {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 965px) {
-    .testimonial-header h1 {
-        line-height: 55px;
-    }
+  .testimonial-header h1 {
+    line-height: 55px;
+  }
 }
 
 @media screen and (max-width: 770px) {
-    .testimonial-header h1 {
-        font-size: 28px;
-    }
+  .testimonial-header h1 {
+    font-size: 28px;
+  }
 }
 
 @media screen and (max-width: 430px) {
-    .testimonial-header h1 {
-        font-size: 22px;
-        line-height: 40px;
-    }
+  .testimonial-header h1 {
+    font-size: 22px;
+    line-height: 40px;
+  }
 }

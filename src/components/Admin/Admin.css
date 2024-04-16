@@ -1,0 +1,262 @@
+.users__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  width: 100%;
+}
+.users__container-head {
+  width: 100%;
+}
+.users__container-head h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 22px;
+}
+.users__container-users {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 1rem;
+  /* overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none; */
+  width: 100%;
+}
+.users__container-users-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+
+  border-radius: 5px;
+  background-color: var(--color-white);
+  backdrop-filter: blur(40px);
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  height: 194.4px;
+}
+.users__container-users-user h3 {
+  font-size: 22px;
+  color: var(--color-black);
+}
+.user-inner {
+  width: 100%;
+  text-align: center;
+}
+.user-inner p {
+  color: var(--color-black);
+}
+.user-inner-cash p {
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--color-black);
+}
+.user-inner-cash p span {
+  color: #3edd87;
+}
+
+/* ==================================== User Transactions ============================= */
+.users__transactions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 1rem;
+  /* overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none; */
+  width: 100%;
+}
+.users__transactions-transaction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+
+  border-radius: 5px;
+  background-color: var(--color-white);
+  backdrop-filter: blur(40px);
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  height: 233.6px;
+}
+.users__transactions-transaction h3 {
+  color: var(--color-black);
+}
+.users__transactions-inner {
+  width: 100%;
+}
+.users__transactions-inner p {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+.users__transactions-inner p span {
+  text-transform: capitalize;
+  color: var(--color-black);
+}
+#wallet_add {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-black);
+}
+.users__transactions-btns button:first-child {
+  background-color: #3edd87;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.users__transactions-btns button:last-child {
+  background-color: rgb(152, 0, 30);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 322px) {
+  .users__container-users {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1rem;
+    /* overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none; */
+    width: 100%;
+  }
+  .users__container-users-user h3 {
+    font-size: 20px;
+  }
+  .user-inner p {
+    font-size: 13px;
+  }
+  .users__transactions {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 323px) and (max-width: 376px) {
+  .users__container-users {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1rem;
+    /* overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none; */
+    width: 100%;
+  }
+  .users__container-users-user h3 {
+    font-size: 20px;
+  }
+  .user-inner p {
+    font-size: 13px;
+  }
+  .users__transactions {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 426px) {
+  .users__container-users {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1rem;
+    /* overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none; */
+    width: 100%;
+  }
+  .users__container-users-user h3 {
+    font-size: 22px;
+  }
+  .user-inner p {
+    font-size: 13px;
+  }
+  .users__transactions {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .users__container-users {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+    /* overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none; */
+    width: 100%;
+  }
+  .users__container-users-user h3 {
+    font-size: 20px;
+  }
+  .user-inner p {
+    font-size: 13px;
+  }
+
+  .users__transactions {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .users__container-users {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 1rem;
+    /* overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none; */
+    width: 100%;
+  }
+  .users__container-users-user h3 {
+    font-size: 20px;
+  }
+  .user-inner p {
+    font-size: 13px;
+  }
+
+  .users__transactions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+}

@@ -10,27 +10,34 @@ import ConfirmationMail from "./pages/ConfirmationMail";
 import PrivateRoutes from "./utils/PrivateRoutes";
 import Dashboard from "./pages/Dashboard";
 import Kyc from "./pages/Kyc";
+import AdminDashboard from "./pages/AdminDashboard";
+import { ThemeProvider } from "./context/ThemeContext";
+import FloatingButton from "./components/common/FloatingButton";
 
 function App() {
   return (
     <div className="page__gradient">
       <Router>
         <AuthProvider>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Service />} />
+          <ThemeProvider>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Service />} />
 
-            {/* Auth */}
-            <Route path="/signup" element={<Register />} />
-            <Route path="/signin" element={<Login />} />
-            <Route path="/confirmation-mail" element={<ConfirmationMail />} />
+              {/* Auth */}
+              <Route path="/signup" element={<Register />} />
+              <Route path="/signin" element={<Login />} />
+              <Route path="/confirmation-mail" element={<ConfirmationMail />} />
 
-            {/* Protected Routes */}
-            <Route element={<PrivateRoutes />}>
-              <Route path="/dashboard/*" element={<Dashboard />} />
-              <Route path="/kyc-verification" element={<Kyc />} />
-            </Route>
-          </Routes>
+              {/* Protected Routes */}
+              <Route element={<PrivateRoutes />}>
+                <Route path="/dashboard/*" element={<Dashboard />} />
+                <Route path="/kyc-verification" element={<Kyc />} />
+                <Route path="/admin/*" element={<AdminDashboard />} />
+              </Route>
+            </Routes>
+            <FloatingButton />
+          </ThemeProvider>
         </AuthProvider>
       </Router>
     </div>

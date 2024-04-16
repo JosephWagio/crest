@@ -13,13 +13,13 @@ import TradingViewTimeline from "./Tradingview/TradingViewTimeline";
 const Home = () => {
   return (
     <div>
-      <TradingViewTimeline/>
+      <TradingViewTimeline />
       <Navbar />
       <Header />
       <Features />
       <AboutUs />
       <Package />
-      <TradingViewTickerTape/>
+      <TradingViewTickerTape />
       <Testimonials />
       <Footer />
     </div>

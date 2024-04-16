@@ -50,7 +50,7 @@ const Setting = ({ handleCloseSidebar }) => {
     }
 
     try {
-      const response = await fetch(`https://crest-backend.onrender.com/api/users/${userProfile.user.id}/`,
+      const response = await fetch(`https://crestbackend.up.railway.app/api/users/${userProfile.user.id}/`,
         {
           method: "PATCH",
           body: formData,

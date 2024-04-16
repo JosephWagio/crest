@@ -25,7 +25,7 @@ a {
 }
 
 .page__gradient {
-  background: #1a1a1a;
+  background: var(--color-black);
   overflow-x: hidden;
 }
 
@@ -98,6 +98,24 @@ a {
 .bottom-ellipse img {
   height: 850px;
   width: 700px;
+}
+
+.floating_btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  z-index: 300;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1025px) {

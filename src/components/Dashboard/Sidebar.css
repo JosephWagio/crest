@@ -1,6 +1,6 @@
 .sidebar {
   /* position: fixed; */
-  background-color: #1a1a1b;
+  background-color: var(--color-black);
   width: 269px;
   height: 100%;
   /* overflow-x: hidden; */
@@ -11,7 +11,7 @@
 .sidebar-close {
   width: fit-content;
   height: 100%;
-  background-color: #1a1a1b;
+  background-color: var(--color-black);
   transition: 0.3s;
 }
 .close-sider-button-mobile {
@@ -55,7 +55,7 @@
 .sidebar-link {
   display: flex;
   align-items: center;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--color-white);
   text-decoration: none;
   cursor: pointer;
 }
@@ -76,6 +76,16 @@
 }
 .sidebar-link-close {
   display: none;
+}
+.logout-btn {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.72);
+  cursor: pointer;
+}
+.logout-btn svg {
+  fill: var(--color-golden);
+  font-size: 22px;
 }
 
 @media screen and (max-width: 322px) {
