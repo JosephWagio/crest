@@ -36,9 +36,13 @@ const SidebarMenu = ({ closebar, handleCloseSidebar }) => {
           </div>
           <div className="sidebar-logo">
             {theme === "light" ? (
-              <img src={Logo} alt="Logo" className={closebar ? 'sidebar-logo-img-close' : 'sidebar-logo-img'} />
+              <Link to={"/"}>
+                <img src={Logo} alt="Logo" className={closebar ? 'sidebar-logo-img-close' : 'sidebar-logo-img'} />
+              </Link>
             ) : (
-              <img src={Logo2} alt="Logo" className={closebar ? 'sidebar-logo-img-close' : 'sidebar-logo-img-light'} />
+              <Link to={"/"}>
+                <img src={Logo2} alt="Logo" className={closebar ? 'sidebar-logo-img-close' : 'sidebar-logo-img-light'} />
+              </Link>
             )}
           </div>
 
