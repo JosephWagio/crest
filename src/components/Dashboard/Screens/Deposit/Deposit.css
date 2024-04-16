@@ -9,7 +9,7 @@
   width: 100%;
 }
 .deposit__container-head h3 {
-  color: #fff;
+  color: var(--color-white);
   font-weight: 600;
   font-size: 20px;
 }
@@ -25,7 +25,7 @@
   width: 60%;
 }
 .deposit__container-deposit-inner label {
-  color: #fff;
+  color: var(--color-white);
   font-size: 14px;
 }
 .deposit__container-deposit-inner select {

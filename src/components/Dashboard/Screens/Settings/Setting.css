@@ -50,7 +50,7 @@
 
 .settings-user-info p {
   font-family: var(--font-family);
-  color: #ffffff80;
+  color: var(--color-grey);
   font-size: 25px;
   font-weight: 600;
   line-height: 29px;
@@ -60,7 +60,7 @@
 
 .settings-user-info label {
   font-family: var(--font-family);
-  color: #ffffff80;
+  color: var(--color-grey);
   font-size: 16px;
   font-weight: 500;
   line-height: 23px;

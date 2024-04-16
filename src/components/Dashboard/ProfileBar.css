@@ -1,6 +1,6 @@
 .profile__sidebar {
   /* position: fixed; */
-  background-color: #1a1a1b;
+  background-color: var(--color-black);
   width: 269px;
   height: 100%;
   /* overflow-x: hidden; */
@@ -20,7 +20,7 @@
   width: 100%;
 }
 .profile-bar__design {
-  background-color: #ffffff33;
+  background-color: var(--color-grey);
   height: 1px;
   width: 100%;
 }
@@ -76,11 +76,11 @@
 }
 .profile-bar__account div p,
 .profile-bar__assets div p {
-  color: #ffffff80;
+  color: var(--color-grey);
   font-size: 13px;
 }
 .profile-bar__account div span {
-  color: #e1dfeccc;
+  color: var(--color-white);
   font-size: 13px;
 }
 .profile-bar__assets div span {
@@ -88,7 +88,7 @@
   align-items: center;
   gap: 0.3rem;
 
-  color: #e1dfeccc;
+  color: var(--color-white);
   font-size: 13px;
 }
 

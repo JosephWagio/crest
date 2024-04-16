@@ -9,9 +9,11 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { IoLogOut } from "react-icons/io5";
 
 import Logo from "../../assets/CREST HOLDINGS LTD TRANSPARENT BRAND LOGO 2.png"
+import Logo2 from "../../assets/crest logo 2.png"
 import './Sidebar.css';
 import { CiMenuFries } from 'react-icons/ci';
 import AuthContext from '../../context/AuthContext';
+import { useTheme } from '../../context/ThemeContext';
 
 const SidebarMenu = ({ closebar, handleCloseSidebar }) => {
   const { logoutUser } = useContext(AuthContext)
@@ -22,6 +24,9 @@ const SidebarMenu = ({ closebar, handleCloseSidebar }) => {
     logoutUser()
     navigate("/")
   }
+
+  const { theme } = useTheme()
+
   return (
     <>
       <div className={closebar ? 'sidebar-close' : 'sidebar'}>
@@ -30,9 +35,15 @@ const SidebarMenu = ({ closebar, handleCloseSidebar }) => {
             <CiMenuFries />
           </div>
           <div className="sidebar-logo">
-            <Link to={"/"}>
-              <img src={Logo} alt="logo" className={closebar ? 'sidebar-logo-img-close' : 'sidebar-logo-img'} />
-            </Link>
+            {theme === "light" ? (
+              <Link to={"/"}>
+                <img src={Logo} alt="Logo" className={closebar ? 'sidebar-logo-img-close' : 'sidebar-logo-img'} />
+              </Link>
+            ) : (
+              <Link to={"/"}>
+                <img src={Logo2} alt="Logo" className={closebar ? 'sidebar-logo-img-close' : 'sidebar-logo-img-light'} />
+              </Link>
+            )}
           </div>
 
           <div className="sidebar-link-list">
