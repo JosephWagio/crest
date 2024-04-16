@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 import './Package.css';
@@ -23,7 +24,7 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-          <button>Invest Now</button>
+          <button><Link to="/signin">Invest Now</Link></button>
         </div>
         <div className="plans">
           <p>Standard Plan</p>
@@ -37,7 +38,7 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-          <button>Invest Now</button>
+          <button><Link to="/signin">Invest Now</Link></button>
         </div>
         <div className="plans">
           <p>Regular Plan</p>
@@ -51,7 +52,7 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-          <button>Invest Now</button>
+          <button><Link to="/signin">Invest Now</Link></button>
         </div>
         <div className="plans">
           <p>Premium Plan</p>
@@ -65,7 +66,7 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-          <button>Invest Now</button>
+          <button><Link to="/signin">Invest Now</Link></button>
         </div>
       </div>
     </div>
