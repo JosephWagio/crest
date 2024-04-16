@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from "react-router-dom";
-=======
 import React, { useContext } from 'react'
->>>>>>> 5182dafd9a7f7974c3fa9823c9025d52f9a65bf1
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 import './Package.css';
@@ -31,9 +26,6 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-<<<<<<< HEAD
-          <button><Link to="/signin">Invest Now</Link></button>
-=======
           {user ? user.is_superuser ? (
             <Link to={"/admin/users"}>
               <button>Invest Now</button>
@@ -47,7 +39,6 @@ const Package = () => {
               <button>Invest Now</button>
             </Link>
           )}
->>>>>>> 5182dafd9a7f7974c3fa9823c9025d52f9a65bf1
         </div>
         <div className="plans">
           <p>Standard Plan</p>
@@ -61,9 +52,6 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-<<<<<<< HEAD
-          <button><Link to="/signin">Invest Now</Link></button>
-=======
           {user ? user.is_superuser ? (
             <Link to={"/admin/users"}>
               <button>Invest Now</button>
@@ -77,7 +65,6 @@ const Package = () => {
               <button>Invest Now</button>
             </Link>
           )}
->>>>>>> 5182dafd9a7f7974c3fa9823c9025d52f9a65bf1
         </div>
         <div className="plans">
           <p>Regular Plan</p>
@@ -91,9 +78,6 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-<<<<<<< HEAD
-          <button><Link to="/signin">Invest Now</Link></button>
-=======
           {user ? user.is_superuser ? (
             <Link to={"/admin/users"}>
               <button>Invest Now</button>
@@ -107,7 +91,6 @@ const Package = () => {
               <button>Invest Now</button>
             </Link>
           )}
->>>>>>> 5182dafd9a7f7974c3fa9823c9025d52f9a65bf1
         </div>
         <div className="plans">
           <p>Premium Plan</p>
@@ -121,9 +104,6 @@ const Package = () => {
             <li><IoMdCheckmarkCircleOutline />   Capital Will Store</li>
             <li><IoMdCheckmarkCircleOutline />   24/7 Support</li>
           </ul>
-<<<<<<< HEAD
-          <button><Link to="/signin">Invest Now</Link></button>
-=======
           {user ? user.is_superuser ? (
             <Link to={"/admin/users"}>
               <button>Invest Now</button>
@@ -137,7 +117,6 @@ const Package = () => {
               <button>Invest Now</button>
             </Link>
           )}
->>>>>>> 5182dafd9a7f7974c3fa9823c9025d52f9a65bf1
         </div>
       </div>
     </div>
