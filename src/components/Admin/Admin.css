@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #fff;
+  color: var(--color-white);
   font-weight: 600;
   font-size: 22px;
 }
@@ -35,7 +35,7 @@
   padding: 1rem;
 
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--color-white);
   backdrop-filter: blur(40px);
   cursor: pointer;
   transition: 0.3s;
@@ -44,14 +44,19 @@
 }
 .users__container-users-user h3 {
   font-size: 22px;
+  color: var(--color-black);
 }
 .user-inner {
   width: 100%;
   text-align: center;
 }
+.user-inner p {
+  color: var(--color-black);
+}
 .user-inner-cash p {
   font-weight: 600;
   font-size: 17px;
+  color: var(--color-black);
 }
 .user-inner-cash p span {
   color: #3edd87;
@@ -77,12 +82,15 @@
   padding: 1rem;
 
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--color-white);
   backdrop-filter: blur(40px);
   cursor: pointer;
   transition: 0.3s;
   width: 100%;
   height: 233.6px;
+}
+.users__transactions-transaction h3 {
+  color: var(--color-black);
 }
 .users__transactions-inner {
   width: 100%;
@@ -90,14 +98,17 @@
 .users__transactions-inner p {
   font-size: 13px;
   font-weight: 600;
+  color: var(--color-black);
 }
 .users__transactions-inner p span {
   text-transform: capitalize;
+  color: var(--color-black);
 }
 #wallet_add {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: var(--color-black);
 }
 .users__transactions-btns button:first-child {
   background-color: #3edd87;

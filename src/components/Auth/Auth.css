@@ -19,6 +19,9 @@
   color: var(--color-white);
   font-weight: 500;
 }
+.logo__wrap a img {
+  width: 232px;
+}
 .go-back {
   display: flex;
   align-items: center;
@@ -91,10 +94,12 @@
 }
 .reg__form-head p {
   font-size: 14px;
+  color: var(--color-black);
 }
 .registerform__contents h2 {
   font-weight: 500;
   font-size: 24px;
+  color: var(--color-black);
 }
 
 form {
@@ -118,6 +123,7 @@ form {
 #input__field label {
   font-weight: 500;
   font-size: 14px;
+  color: var(--color-black);
 }
 #input__field input {
   padding: 1rem;
@@ -134,7 +140,7 @@ form {
 form button {
   padding: 1rem;
   font-weight: 600;
-  color: var(--color-white);
+  color: #fff;
   background-color: var(--color-golden);
   border: none;
   border-radius: 10px;
@@ -151,7 +157,7 @@ form button:hover {
 }
 .switch-auth p {
   font-size: 14px;
-  color: var(--color-grey);
+  color: var(--color-grey-second);
 }
 .switch-auth p a {
   font-weight: 600;
@@ -214,6 +220,10 @@ form button:hover {
 }
 .confirm__mail div p {
   font-size: 14px;
+}
+
+.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
+  color: var(--color-black);
 }
 
 @media screen and (max-width: 322px) {

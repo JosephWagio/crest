@@ -7,8 +7,10 @@ import Alert from '@mui/material/Alert';
 import { styled } from '@mui/material/styles';
 
 import Logo from "../../assets/logo2.png";
+import Logo2 from "../../assets/crest logo 2.png"
 import Crest from "../../assets/crest.png";
 import AuthContext from "../../context/AuthContext.js"
+import { useTheme } from '../../context/ThemeContext.js';
 
 const LoginForm = () => {
     const IOSSwitch = styled((props) => (
@@ -63,13 +65,14 @@ const LoginForm = () => {
         showAlert,
         alertMessage,
         alertSeverity, } = useContext(AuthContext)
+    const { theme } = useTheme()
 
 
     return (
         <div className="registerform">
             <div className="logo__wrap">
                 <Link to='/' className="reg__logo">
-                    <img src={Logo} alt="" />
+                    <img src={theme === "light" ? Logo : Logo2} alt="" />
                 </Link>
 
                 <Link to='/' className="go-back">
