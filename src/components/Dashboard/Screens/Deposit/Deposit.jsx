@@ -21,7 +21,7 @@ const Deposit = ({ handleCloseSidebar }) => {
     try {
       e.preventDefault()
 
-      const response = await fetch("https://crestbackend.up.railway.app/api/transaction/",
+      const response = await fetch("https://crest-backend.onrender.com/api/transaction/",
         {
           method: "POST",
           headers: {
