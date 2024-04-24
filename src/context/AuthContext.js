@@ -266,7 +266,7 @@ export const AuthProvider = ({ children }) => {
   const allUsersTransactions = async () => {
     try {
       const response = await fetch(
-        "https://crestbackend.up.railway.app/api/transaction/",
+        "https://crest-backend.onrender.com/api/transaction/",
         {
           method: "GET",
           headers: {

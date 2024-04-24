@@ -17,7 +17,7 @@ const AdminUserTransactions = ({ handleCloseSidebar }) => {
             const formData = new FormData();
             formData.append("status", "done");
 
-            const response = await fetch(`https://crestbackend.up.railway.app/api/transaction/${id}`,
+            const response = await fetch(`https://crest-backend.onrender.com/api/transaction/${id}`,
                 {
                     method: "PATCH",
                     body: formData
