@@ -324,9 +324,6 @@ export const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    if (loading) {
-      updateToken();
-    }
     const mins = 1000 * 60 * 9;
     const interval = setInterval(() => {
       if (authTokens) {
@@ -385,8 +382,6 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={contextData}>
-      {loading ? null : children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={contextData}>{children}</AuthContext.Provider>
   );
 };
