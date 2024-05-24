@@ -120,10 +120,6 @@ const RegisterForm = () => {
                                 <label>Password</label>
                                 <input type="password" name="password" placeholder="12345!$%" />
                             </div>
-                            <FormControlLabel
-                                control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-                                label="Remember me"
-                            />
                             <button type="submit">Sign Up</button>
                         </form>
                         <div className="switch-auth">
