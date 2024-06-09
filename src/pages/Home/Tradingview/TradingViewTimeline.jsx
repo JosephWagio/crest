@@ -68,9 +68,9 @@ const TradingViewTimeline = () => {
     `;
 
     const container = document.getElementById("tradingview-widget-container");
-    
+
     return () => {
-     if (container) {
+      if (container) {
         container.appendChild(script);
       }
     };
