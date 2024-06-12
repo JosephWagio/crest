@@ -32,6 +32,7 @@ export const AuthProvider = ({ children }) => {
   // Admin
   const [allUsers, setAllUsers] = useState([]);
   const [allTransactions, setAllTransactions] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const fileInputRef = useRef(null);
   const addressFileInputRef = useRef(null);
@@ -105,6 +106,7 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
 
   const registerUser = async (e) => {
+    setIsLoading(true);
     try {
       e.preventDefault();
       console.log("Student Created");
@@ -137,52 +139,63 @@ export const AuthProvider = ({ children }) => {
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const loginUser = async (e) => {
     e.preventDefault();
-    let response = await fetch(
-      "https://crestbackend.up.railway.app/api/signin/",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: e.target.email.value,
-          password: e.target.password.value,
-        }),
-      }
-    );
-    const data = await response.json();
-    console.log(data);
 
-    if (response.status === 200) {
-      setAuthTokens(data);
-      setUser(jwtDecode(data.access));
-      localStorage.setItem("authTokens", JSON.stringify(data));
-      userDetails();
+    setIsLoading(true);
 
-      if (data.kyc_verified) {
-        setShowAlert(true);
-        setAlertMessage("Login Successful");
-        setAlertSeverity("success");
-        if (data.is_superuser) {
-          navigate("/admin/users");
+    try {
+      let response = await fetch(
+        "https://crestbackend.up.railway.app/api/signin/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: e.target.email.value,
+            password: e.target.password.value,
+          }),
+        }
+      );
+      const data = await response.json();
+      console.log(data);
+
+      if (response.status === 200) {
+        setAuthTokens(data);
+        setUser(jwtDecode(data.access));
+        localStorage.setItem("authTokens", JSON.stringify(data));
+        userDetails();
+
+        if (data.kyc_verified) {
+          setShowAlert(true);
+          setAlertMessage("Login Successful");
+          setAlertSeverity("success");
+          if (data.is_superuser) {
+            navigate("/admin/users");
+          } else {
+            navigate("/dashboard/home");
+          }
         } else {
-          navigate("/dashboard/home");
+          setShowAlert(true);
+          setAlertMessage("KYC Verification Pending");
+          setAlertSeverity("info");
+          navigate("/kyc-verification");
         }
       } else {
         setShowAlert(true);
-        setAlertMessage("KYC Verification Pending");
-        setAlertSeverity("info");
-        navigate("/kyc-verification");
+        setAlertMessage("Failed to login user");
+        setAlertSeverity("error");
       }
-    } else {
-      setShowAlert(true);
-      setAlertMessage("Failed to login user");
-      setAlertSeverity("error");
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -238,7 +251,9 @@ export const AuthProvider = ({ children }) => {
       } else {
         console.error("Failed to fetch user details:", response.statusText);
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const allUsersDetails = async () => {
@@ -260,7 +275,9 @@ export const AuthProvider = ({ children }) => {
       } else {
         console.error("Failed to fetch user details:", response.statusText);
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const allUsersTransactions = async () => {
@@ -283,7 +300,9 @@ export const AuthProvider = ({ children }) => {
       } else {
         console.error("Failed to fetch user details:", response.statusText);
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   // =============================================== KYC ======================================
@@ -297,6 +316,8 @@ export const AuthProvider = ({ children }) => {
     formData.append("address_document_type", addressDocumentType);
     formData.append("address_document", addressDocument);
     formData.append("kyc_verified", true);
+
+    setIsLoading(true);
 
     try {
       const response = await fetch(
@@ -320,6 +341,8 @@ export const AuthProvider = ({ children }) => {
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -350,6 +373,8 @@ export const AuthProvider = ({ children }) => {
     setShowAlert,
     setAlertMessage,
     setAlertSeverity,
+    isLoading,
+    setIsLoading,
 
     // KYC
     step,

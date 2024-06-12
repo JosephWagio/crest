@@ -8,6 +8,7 @@ import Alert from '@mui/material/Alert';
 
 import "./Deposit.css"
 import AuthContext from '../../../../context/AuthContext'
+import { CircularProgress } from '@mui/material';
 
 const Deposit = ({ handleCloseSidebar }) => {
   const [wallet, setWallet] = useState(1);
@@ -15,9 +16,11 @@ const Deposit = ({ handleCloseSidebar }) => {
   const [walletAddress, setWalletAddress] = useState("");
   const [copied, setCopied] = useState(false);
 
-  const { userProfile, authTokens, setAlertSeverity, setAlertMessage, setShowAlert, showAlert, alertSeverity, alertMessage } = useContext(AuthContext)
+  const { userProfile, authTokens, setAlertSeverity, setAlertMessage, setShowAlert, showAlert, alertSeverity, alertMessage, isLoading,
+    setIsLoading, } = useContext(AuthContext)
 
   const handleDeposit = async (e) => {
+    setIsLoading(false)
     try {
       e.preventDefault()
 
@@ -51,6 +54,8 @@ const Deposit = ({ handleCloseSidebar }) => {
       }
     } catch (error) {
       console.log(error)
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -134,7 +139,12 @@ const Deposit = ({ handleCloseSidebar }) => {
             </div>
 
             <div className="deposit__container-deposit-inner-btn">
-              <button onClick={handleDeposit}>Deposit</button>
+              <button onClick={handleDeposit}>
+                {isLoading ? (
+                  <CircularProgress color="inherit" size="20px" />
+                ) : "Deposit"}
+
+              </button>
             </div>
 
             <div className='deposit__container-deposit-tips'>

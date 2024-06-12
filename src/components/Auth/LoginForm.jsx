@@ -11,6 +11,7 @@ import Logo2 from "../../assets/crest logo 2.png"
 import Crest from "../../assets/crest.png";
 import AuthContext from "../../context/AuthContext.js"
 import { useTheme } from '../../context/ThemeContext.js';
+import { CircularProgress } from '@mui/material';
 
 const LoginForm = () => {
     const IOSSwitch = styled((props) => (
@@ -64,7 +65,7 @@ const LoginForm = () => {
     const { loginUser, setShowAlert,
         showAlert,
         alertMessage,
-        alertSeverity, } = useContext(AuthContext)
+        alertSeverity, isLoading } = useContext(AuthContext)
     const { theme } = useTheme()
 
 
@@ -110,7 +111,11 @@ const LoginForm = () => {
                                 control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
                                 label="Remember me"
                             />
-                            <button type="submit">Sign In</button>
+                            <button type="submit">
+                                {isLoading ? (
+                                    <CircularProgress color="inherit" size="20px" />
+                                ) : "Sign In"}
+                            </button>
                         </form>
                         <div className="switch-auth">
                             <p>Don't have an account? <Link to='/signup'>Sign up</Link></p>

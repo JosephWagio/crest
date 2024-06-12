@@ -7,9 +7,10 @@ import AuthContext from '../context/AuthContext';
 import Crest from "../assets/crest.png"
 import { Step1, Step2, Step3, Step4, Step5 } from '../components/Kyc/Step';
 import { Link } from 'react-router-dom';
+import { CircularProgress } from '@mui/material';
 
 const Kyc = () => {
-    const { step, setStep, showAlert, alertSeverity, setShowAlert, alertMessage, nextStep, KycVerification, } = useContext(AuthContext)
+    const { step, setStep, showAlert, alertSeverity, setShowAlert, alertMessage, nextStep, KycVerification, isLoading } = useContext(AuthContext)
     const navigate = useNavigate();
 
     const handleBack = () => {
@@ -74,7 +75,13 @@ const Kyc = () => {
                     <div className='kyc__card-btn'>
                         {step > 0 && <button onClick={handleBack}>Back Page</button>}
                         <button onClick={handleSubmit}>
-                            {step === 4 ? 'Submit KYC' : 'Proceed'}
+                            {isLoading ? (
+                                <CircularProgress color="inherit" size="20px" />
+                            ) : (
+                                <>
+                                    {step === 4 ? 'Submit KYC' : 'Proceed'}
+                                </>
+                            )}
                         </button>
                     </div>
                 </div>
