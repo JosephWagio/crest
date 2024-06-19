@@ -8,6 +8,7 @@ import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 import AuthContext from '../../../../context/AuthContext';
 import "./Investment.css"
 import InvestmentPlans from '../../../../dummy/InvestmentPlan';
+import { CircularProgress } from '@mui/material';
 
 const Investment = ({ handleCloseSidebar }) => {
   const [open, setOpen] = useState(false);
@@ -15,7 +16,8 @@ const Investment = ({ handleCloseSidebar }) => {
   const [wallet, setWallet] = useState("");
   const [amount, setAmount] = useState('');
 
-  const { userProfile, authTokens, setShowAlert, setAlertMessage, setAlertSeverity, showAlert, alertSeverity, alertMessage } = useContext(AuthContext)
+  const { userProfile, authTokens, setShowAlert, setAlertMessage, setAlertSeverity, showAlert, alertSeverity, alertMessage, isLoading,
+    setIsLoading, } = useContext(AuthContext)
 
   const handleClose = () => {
     setOpen(false);
@@ -30,6 +32,7 @@ const Investment = ({ handleCloseSidebar }) => {
   }
 
   const handleInvestment = async (e) => {
+    setIsLoading(true)
     try {
       e.preventDefault()
 
@@ -62,6 +65,8 @@ const Investment = ({ handleCloseSidebar }) => {
       }
     } catch (error) {
       console.log(error)
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -127,7 +132,11 @@ const Investment = ({ handleCloseSidebar }) => {
               <input type="text" placeholder='Enter Amount' value={amount} onChange={(e) => setAmount(e.target.value)} />
               <div className='invest-btns'>
                 <button onClick={handleClose}>Cancel</button>
-                <button onClick={handleInvestment}>Invest</button>
+                <button onClick={handleInvestment}>
+                  {isLoading ? (
+                    <CircularProgress color="inherit" size="20px" />
+                  ) : "Invest"}
+                </button>
               </div>
             </div>
           </Backdrop>
@@ -142,7 +151,6 @@ const Investment = ({ handleCloseSidebar }) => {
               <p id='wallet'>Amount</p>
               <p id='amount'>Earnings</p>
               <p id='start'>Start</p>
-              <p id='end'>End</p>
             </div>
             <div className='profile-bar__design' />
             {userProfile && userProfile.investment.map((investment) => (
@@ -153,7 +161,6 @@ const Investment = ({ handleCloseSidebar }) => {
                 <p id='wallet'>{investment.amount}</p>
                 <span id='amount' className='earning'>${investment.total_return}</span>
                 <span id='start' className="status">{investment.subscription_date}</span>
-                <span id='end' className='end_date'>{investment.end_date}</span>
               </div>
             ))}
           </div>

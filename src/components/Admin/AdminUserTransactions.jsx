@@ -1,10 +1,12 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CiMenuFries } from 'react-icons/ci'
 import AuthContext from '../../context/AuthContext'
 import { AiOutlineTransaction } from "react-icons/ai";
-import { Alert } from '@mui/material';
+import { Alert, CircularProgress } from '@mui/material';
 
 const AdminUserTransactions = ({ handleCloseSidebar }) => {
+    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading1, setIsLoading1] = useState(false)
     const { userProfile, allUsersTransactions, allTransactions, showAlert, alertSeverity, alertMessage, setShowAlert, setAlertMessage, setAlertSeverity } = useContext(AuthContext)
 
     useEffect(() => {
@@ -12,6 +14,7 @@ const AdminUserTransactions = ({ handleCloseSidebar }) => {
     }, [allUsersTransactions])
 
     const handleApproveTransaction = async (id, e) => {
+        setIsLoading(true)
         try {
             e.preventDefault()
             const formData = new FormData();
@@ -38,10 +41,13 @@ const AdminUserTransactions = ({ handleCloseSidebar }) => {
             }
         } catch (error) {
             console.log(error)
+        } finally {
+            setIsLoading(false)
         }
     }
 
     const handleDeclineTransaction = async (id, e) => {
+        setIsLoading1(true)
         try {
             e.preventDefault()
             const formData = new FormData();
@@ -68,6 +74,8 @@ const AdminUserTransactions = ({ handleCloseSidebar }) => {
             }
         } catch (error) {
             console.log(error)
+        } finally {
+            setIsLoading1(false)
         }
     }
 
@@ -117,8 +125,18 @@ const AdminUserTransactions = ({ handleCloseSidebar }) => {
                             </div>
                             {transaction.status === "pending" && (
                                 <div className='users__transactions-btns'>
-                                    <button onClick={(e) => handleApproveTransaction(transaction.id, e)}>approve</button>
-                                    <button onClick={(e) => handleDeclineTransaction(transaction.id, e)}> decline</button>
+                                    <button onClick={(e) => handleApproveTransaction(transaction.id, e)}>
+                                        {isLoading ? (
+                                            <CircularProgress color="inherit" size="20px" />
+                                        ) : "approve"}
+
+                                    </button>
+                                    <button onClick={(e) => handleDeclineTransaction(transaction.id, e)}>
+                                        {isLoading1 ? (
+                                            <CircularProgress color="inherit" size="20px" />
+                                        ) : "decline"}
+
+                                    </button>
                                 </div>
                             )}
                         </div>

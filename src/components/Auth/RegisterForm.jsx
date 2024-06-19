@@ -11,6 +11,7 @@ import Logo2 from "../../assets/crest logo 2.png"
 import Crest from "../../assets/crest.png";
 import AuthContext from "../../context/AuthContext.js"
 import { useTheme } from '../../context/ThemeContext.js';
+import { CircularProgress } from '@mui/material';
 
 const RegisterForm = () => {
 
@@ -65,7 +66,7 @@ const RegisterForm = () => {
     const { registerUser, setShowAlert,
         showAlert,
         alertMessage,
-        alertSeverity, } = useContext(AuthContext)
+        alertSeverity, isLoading, } = useContext(AuthContext)
 
     const { theme } = useTheme()
 
@@ -120,7 +121,15 @@ const RegisterForm = () => {
                                 <label>Password</label>
                                 <input type="password" name="password" placeholder="12345!$%" />
                             </div>
-                            <button type="submit">Sign Up</button>
+                            <FormControlLabel
+                                control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
+                                label="Remember me"
+                            />
+                            <button type="submit">
+                                {isLoading ? (
+                                    <CircularProgress color="inherit" size="20px" />
+                                ) : "Sign Up"}
+                            </button>
                         </form>
                         <div className="switch-auth">
                             <p>Already have an account? <Link to='/signin'>Sign in</Link></p>

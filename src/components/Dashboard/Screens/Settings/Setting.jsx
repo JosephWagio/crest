@@ -4,9 +4,11 @@ import Alert from '@mui/material/Alert';
 
 import './Setting.css';
 import AuthContext from '../../../../context/AuthContext';
+import { CircularProgress } from '@mui/material';
 
 const Setting = ({ handleCloseSidebar }) => {
-  const { userProfile, setShowAlert, setAlertMessage, setAlertSeverity, showAlert, alertSeverity, alertMessage } = useContext(AuthContext)
+  const { userProfile, setShowAlert, setAlertMessage, setAlertSeverity, showAlert, alertSeverity, alertMessage, isLoading,
+    setIsLoading, } = useContext(AuthContext)
 
   const [image, setImage] = useState("");
   const [firstName, setFirstName] = useState(userProfile ? userProfile.user.first_name : '');
@@ -40,6 +42,8 @@ const Setting = ({ handleCloseSidebar }) => {
   const handleProfileUpdate = async (e) => {
     e.preventDefault()
 
+    setIsLoading(true)
+
     const formData = new FormData();
     formData.append('first_name', firstName);
     formData.append('last_name', lastName);
@@ -71,6 +75,8 @@ const Setting = ({ handleCloseSidebar }) => {
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -160,7 +166,12 @@ const Setting = ({ handleCloseSidebar }) => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button onClick={handleProfileUpdate} className="button">Save</button>
+            <button onClick={handleProfileUpdate} className="button">
+              {isLoading ? (
+                <CircularProgress color="inherit" size="20px" />
+              ) : "Save"}
+
+            </button>
           </form>
         </div>
       </div>

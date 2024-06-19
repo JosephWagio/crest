@@ -4,6 +4,7 @@ import AuthContext from '../../../../context/AuthContext';
 import { FaCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import Alert from '@mui/material/Alert';
+import { CircularProgress } from '@mui/material';
 
 const Withdraw = ({ handleCloseSidebar }) => {
   const [wallet, setWallet] = useState(1);
@@ -11,9 +12,11 @@ const Withdraw = ({ handleCloseSidebar }) => {
   const [walletAddress, setWalletAddress] = useState("");
   const [tvn, setTvn] = useState("");
 
-  const { userProfile, authTokens, setShowAlert, setAlertMessage, setAlertSeverity, showAlert, alertSeverity, alertMessage } = useContext(AuthContext)
+  const { userProfile, authTokens, setShowAlert, setAlertMessage, setAlertSeverity, showAlert, alertSeverity, alertMessage, isLoading,
+    setIsLoading, } = useContext(AuthContext)
 
   const handleDeposit = async (e) => {
+    setIsLoading(true)
     if (tvn) {
       try {
         e.preventDefault()
@@ -49,6 +52,8 @@ const Withdraw = ({ handleCloseSidebar }) => {
         }
       } catch (error) {
         console.log(error)
+      } finally {
+        setIsLoading(false)
       }
     }
     else {
@@ -56,7 +61,6 @@ const Withdraw = ({ handleCloseSidebar }) => {
       setAlertMessage("TVN CAN NOT BE EMPTY!!")
       setAlertSeverity("error");
     }
-
   }
   return (
     <div className='main-container'>
@@ -112,7 +116,11 @@ const Withdraw = ({ handleCloseSidebar }) => {
             </div>
 
             <div className="deposit__container-deposit-inner-btn">
-              <button onClick={handleDeposit}>Withdraw</button>
+              <button onClick={handleDeposit}>
+                {isLoading ? (
+                  <CircularProgress color="inherit" size="20px" />
+                ) : "Withdraw"}
+              </button>
             </div>
 
             <div className='deposit__container-deposit-tips'>
