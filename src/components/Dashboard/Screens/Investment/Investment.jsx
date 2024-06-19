@@ -151,7 +151,6 @@ const Investment = ({ handleCloseSidebar }) => {
               <p id='wallet'>Amount</p>
               <p id='amount'>Earnings</p>
               <p id='start'>Start</p>
-              <p id='end'>End</p>
             </div>
             <div className='profile-bar__design' />
             {userProfile && userProfile.investment.map((investment) => (
@@ -162,7 +161,6 @@ const Investment = ({ handleCloseSidebar }) => {
                 <p id='wallet'>{investment.amount}</p>
                 <span id='amount' className='earning'>${investment.total_return}</span>
                 <span id='start' className="status">{investment.subscription_date}</span>
-                <span id='end' className='end_date'>{investment.end_date}</span>
               </div>
             ))}
           </div>

@@ -145,11 +145,10 @@ export const AuthProvider = ({ children }) => {
   };
 
   const loginUser = async (e) => {
-    e.preventDefault();
-
     setIsLoading(true);
 
     try {
+      e.preventDefault();
       let response = await fetch(
         "https://crestbackend.up.railway.app/api/signin/",
         {
