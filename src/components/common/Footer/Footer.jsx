@@ -60,7 +60,7 @@ const Footer = () => {
             <div className="social-logo"><img src={X} alt="Twitter" /></div>
             <div className="social-logo"><img src={IG} alt="Instargran" /></div>
           </div>
-          <a href="mailto:wagiojoseph@gmail.com">crestholding@gmail.com</a>
+          <a href="mailto:wagiojoseph@gmail.com">cresttradeworldwide@gmail.com</a>   
         </div>
       </div>
       <div className="footer-copyright">

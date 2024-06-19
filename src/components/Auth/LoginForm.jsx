@@ -1,10 +1,11 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IoIosArrowForward } from "react-icons/io";
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Alert from '@mui/material/Alert';
 import { styled } from '@mui/material/styles';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 import Logo from "../../assets/logo2.png";
 import Logo2 from "../../assets/crest logo 2.png"
@@ -68,6 +69,7 @@ const LoginForm = () => {
         alertSeverity, isLoading } = useContext(AuthContext)
     const { theme } = useTheme()
 
+    const [capVal, setCapVal] = useState(null);
 
     return (
         <div className="registerform">
@@ -107,11 +109,11 @@ const LoginForm = () => {
                                 <label>Password</label>
                                 <input type="password" name="password" placeholder="12345!$%" />
                             </div>
-                            <FormControlLabel
-                                control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-                                label="Remember me"
+                            <ReCAPTCHA
+                                sitekey="6LebCucpAAAAALItlvI8QZAHBEllmT87W-uXdqGv"
+                                onChange={(val) => setCapVal(val)}
                             />
-                            <button type="submit">
+                            <button disabled={!capVal} type="submit">
                                 {isLoading ? (
                                     <CircularProgress color="inherit" size="20px" />
                                 ) : "Sign In"}
