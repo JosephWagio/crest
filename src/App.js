@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Service from "./pages/Service/Services";
+import TnCs from "./pages/TermsAndCondition/TnCs";
 import { AuthProvider } from "./context/AuthContext";
 import ConfirmationMail from "./pages/ConfirmationMail";
 import PrivateRoutes from "./utils/PrivateRoutes";
@@ -23,6 +24,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<Service />} />
+              <Route path="/tncs" element={<TnCs />} />
 
               {/* Auth */}
               <Route path="/signup" element={<Register />} />

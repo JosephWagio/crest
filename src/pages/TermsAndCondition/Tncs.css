@@ -1,0 +1,124 @@
+.tncs-landing {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 10px;
+	border-radius: 20px;
+	border: 3px solid #ffd700;
+	box-shadow: 0px 0px 20px 0px #ffd700;
+	background: var(--color-gray);
+    position: relative;
+	z-index: 400;
+}
+
+.tncs-landing h1 {
+    font-family: var(--font-family);
+    color: var(--color-white);
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.tncs-detail {
+    z-index: 10;
+    margin-top: 7rem;
+    position: relative;
+}
+
+.tncs-detail h2 {
+    font-family: var(--font-family);
+    color: var(--color-golden);
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 1.5rem 0;
+}
+
+.tncs-detail h3 {
+    font-family: var(--font-family);
+    color: var(--color-golden);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 2rem 0;
+}
+
+.tncs-detail p {
+    font-family: var(--font-family);
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 1rem 0;
+}
+
+.tncs-detail span {
+    font-family: var(--font-family);
+    color: var(--color-grey);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 2rem 0;
+}
+
+@media screen and (max-width: 1025px) {
+    .tncs-landing h1 {
+        font-size: 42px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .tncs-landing h1 {
+        font-size: 38px;
+        line-height: 40px;
+    }
+    .tncs-detail h2 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 35px;
+    }
+    .tncs-detail p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .tncs-landing h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .tncs-detail {
+        margin-top: 4rem;
+    }
+    .tncs-detail h2 {
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 35px;
+    }
+    .tncs-detail h3 {
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 35px; 
+        margin: 1.4rem 0;
+    }
+    .tncs-detail p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 21px;
+        margin: .7rem 0;
+    }
+    .tncs-detail span {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .tncs-landing h1 {
+        font-size: 24px;
+        line-height: 20px;
+    }
+}

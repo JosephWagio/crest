@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IoIosArrowForward } from "react-icons/io";
 import Switch from '@mui/material/Switch';
@@ -70,6 +70,14 @@ const RegisterForm = () => {
 
     const { theme } = useTheme()
 
+    const [hover, setHover] = useState(false);
+
+    const linkStyle = {
+        fontSize: '12px',
+        color: hover ? '#ffd700' : 'initial',
+        textDecoration: 'none'  // optional: to remove underline
+    };
+
 
     return (
         <div className="registerform">
@@ -121,10 +129,14 @@ const RegisterForm = () => {
                                 <label>Password</label>
                                 <input type="password" name="password" placeholder="12345!$%" />
                             </div>
-                            <FormControlLabel
-                                control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-                                label="Remember me"
-                            />
+                            <Link
+                            to="/tncs"
+                            style={linkStyle}
+                            onMouseEnter={() => setHover(true)}
+                            onMouseLeave={() => setHover(false)}
+                            >
+                            <em>Terms and Conditions</em>
+                            </Link>                            
                             <button type="submit">
                                 {isLoading ? (
                                     <CircularProgress color="inherit" size="20px" />

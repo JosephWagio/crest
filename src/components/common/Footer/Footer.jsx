@@ -44,6 +44,7 @@ const Footer = () => {
           <><Link to="/signin">Send and Receive Payments</Link></>
           <><Link to="/signin">Exchange Currencies</Link></>
           <><Link to="/signin">Pay for Business Transactions</Link></>
+          <><Link to="/tncs">Terms and Conditions</Link></>
         </div>
         <div className="resources">
           <h3>Resources</h3>
