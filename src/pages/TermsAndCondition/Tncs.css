@@ -116,9 +116,9 @@
     }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 410px){
     .tncs-landing h1 {
-        font-size: 20px;
+        font-size: 22px;
         line-height: 20px;
     }
 }
