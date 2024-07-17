@@ -21,7 +21,11 @@ export const AuthProvider = ({ children }) => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [alertSeverity, setAlertSeverity] = useState("success");
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(() =>
+    localStorage.getItem("forget-password-email")
+      ? JSON.parse(localStorage.getItem("forget-password-email"))
+      : ""
+  );
 
   // KYC
   const [step, setStep] = useState(0);
