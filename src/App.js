@@ -14,6 +14,8 @@ import Kyc from "./pages/Kyc";
 import AdminDashboard from "./pages/AdminDashboard";
 import { ThemeProvider } from "./context/ThemeContext";
 import FloatingButton from "./components/common/FloatingButton";
+import ForgetPassword from "./pages/ForgetPassword";
+import ForgetPasswordOtp from "./pages/ForgetPasswordOtp";
 
 function App() {
   return (
@@ -30,6 +32,11 @@ function App() {
               <Route path="/signup" element={<Register />} />
               <Route path="/signin" element={<Login />} />
               <Route path="/confirmation-mail" element={<ConfirmationMail />} />
+              <Route path="/forget-password" element={<ForgetPassword />} />
+              <Route
+                path="/forget-password-reset"
+                element={<ForgetPasswordOtp />}
+              />
 
               {/* Protected Routes */}
               <Route element={<PrivateRoutes />}>

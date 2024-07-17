@@ -190,6 +190,16 @@ form button:hover {
 
   width: 100%;
 }
+.forget__password {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.forget__password a {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-black);
+}
 
 /* ================================= Confirm mail ============================== */
 .confirm__mail-body {
