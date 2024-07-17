@@ -109,6 +109,9 @@ const LoginForm = () => {
                                 <label>Password</label>
                                 <input type="password" name="password" placeholder="12345!$%" />
                             </div>
+                            <div className='forget__password'>
+                                <Link to="/forget-password">Forget Password?</Link>
+                            </div>
                             <ReCAPTCHA
                                 sitekey="6LebCucpAAAAALItlvI8QZAHBEllmT87W-uXdqGv"
                                 onChange={(val) => setCapVal(val)}

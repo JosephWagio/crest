@@ -21,6 +21,7 @@ export const AuthProvider = ({ children }) => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [alertSeverity, setAlertSeverity] = useState("success");
+  const [email, setEmail] = useState("");
 
   // KYC
   const [step, setStep] = useState(0);
@@ -198,6 +199,78 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const forgetPassword = async (e) => {
+    setIsLoading(true);
+    e.preventDefault();
+
+    try {
+      let response = await fetch(
+        "https://crestbackend.up.railway.app/api/password-reset/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: e.target.email.value,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setShowAlert(true);
+        setAlertMessage(data.message);
+        setAlertSeverity("success");
+        localStorage.setItem(
+          "forget-password-email",
+          JSON.stringify(e.target.email.value)
+        );
+        navigate("/forget-password-reset");
+      }
+    } catch (error) {
+      console.log("Error", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const forgetPasswordReset = async (e) => {
+    setIsLoading(true);
+    e.preventDefault();
+
+    try {
+      let response = await fetch(
+        "https://crestbackend.up.railway.app/api/password-reset-confirm/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            otp: e.target.otp.value,
+            new_password: e.target.password.value,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setShowAlert(true);
+        setAlertMessage(data.message);
+        setAlertSeverity("success");
+        navigate("/signin");
+      }
+    } catch (error) {
+      console.log("Error", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const logoutUser = () => {
     setAuthTokens(null);
     setUser(null);
@@ -345,6 +418,22 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const getEmail = async () => {
+    try {
+      const jsonValue = JSON.parse(
+        localStorage.getItem("forget-password-email")
+      );
+      setEmail(jsonValue);
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getEmail();
+  }, [email]);
+
   useEffect(() => {
     const mins = 1000 * 60 * 9;
     const interval = setInterval(() => {
@@ -374,6 +463,8 @@ export const AuthProvider = ({ children }) => {
     setAlertSeverity,
     isLoading,
     setIsLoading,
+    forgetPassword,
+    forgetPasswordReset,
 
     // KYC
     step,
