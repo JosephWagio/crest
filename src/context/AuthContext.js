@@ -26,6 +26,7 @@ export const AuthProvider = ({ children }) => {
       ? JSON.parse(localStorage.getItem("forget-password-email"))
       : ""
   );
+  console.log("This is the Forget Email", email)
 
   // KYC
   const [step, setStep] = useState(0);
