@@ -43,9 +43,13 @@ const ForgetPasswordOtp = () => {
                     <div className="loginform__contents">
                         <div className='reg__form-head'>
                             <h2>Create new password?</h2>
-                            <p>Enter the otp and the new password you want to your account</p>
+                            <p>Enter your email and the otp sent to your mail and your new password to change your password.</p>
                         </div>
                         <form onSubmit={forgetPasswordReset}>
+                            <div id="input__field">
+                                <label>Email</label>
+                                <input type="text" name="email" placeholder="example@gmail.com" />
+                            </div>
                             <div id="input__field">
                                 <label>Otp</label>
                                 <input type="text" name="otp" placeholder="1234" />
