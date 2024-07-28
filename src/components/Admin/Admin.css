@@ -102,6 +102,13 @@
   border: none;
   cursor: pointer;
 }
+.user-inner-cash {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
 .user-inner-cash p {
   font-weight: 600;
   font-size: 17px;
@@ -109,6 +116,17 @@
 }
 .user-inner-cash p span {
   color: #3edd87;
+}
+.user-inner-cash div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(173, 0, 0);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  border: none;
 }
 
 /* ==================================== User Transactions ============================= */

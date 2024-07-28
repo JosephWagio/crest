@@ -313,7 +313,7 @@ export const AuthProvider = ({ children }) => {
   const userDetails = async () => {
     try {
       const response = await fetch(
-        `https://crestbackend.up.railway.app/api/user_profile/${user.user_id}/`,
+        `https://crestbackend.up.railway.app/api/user_profile/${user.profile_id}/`,
         {
           method: "GET",
           headers: {
