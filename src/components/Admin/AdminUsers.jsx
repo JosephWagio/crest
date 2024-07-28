@@ -3,6 +3,8 @@ import { CiMenuFries } from 'react-icons/ci'
 import AuthContext from '../../context/AuthContext'
 import { FaUsers } from 'react-icons/fa'
 import { Alert, CircularProgress } from '@mui/material'
+import { MdDelete } from "react-icons/md";
+
 
 import "./Admin.css"
 
@@ -11,6 +13,7 @@ const AdminUsers = ({ handleCloseSidebar }) => {
 
     const [walletBalances, setWalletBalances] = useState({})
     const [loading, setLoading] = useState({})
+    const [isLoading, setIsloading] = useState({})
 
     useEffect(() => {
         allUsersDetails()
@@ -73,6 +76,43 @@ const AdminUsers = ({ handleCloseSidebar }) => {
             }))
         }
     }
+
+    const deleteUser = async (userId) => {
+        setIsloading(prevState => ({
+            ...prevState,
+            [userId]: true
+        }));
+
+        try {
+            let response = await fetch(`https://crestbackend.up.railway.app/api/user_profile/${userId}/`, {
+                method: "DELETE",
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setShowAlert(true);
+                setAlertMessage("User Account Deleted Successfully");
+                setAlertSeverity("success");
+            } else {
+                setShowAlert(true);
+                setAlertMessage("An Error Occurred During Deletion. Try Again");
+                setAlertSeverity("error");
+                console.log(data);
+            }
+        } catch (error) {
+            console.log("Error", error);
+            setShowAlert(true);
+            setAlertMessage("An Error Occurred During Deletion. Try Again");
+            setAlertSeverity("error");
+        } finally {
+            setIsloading(prevState => ({
+                ...prevState,
+                [userId]: false
+            }));
+        }
+    }
+
 
     return (
         <div className='main-container'>
@@ -142,6 +182,12 @@ const AdminUsers = ({ handleCloseSidebar }) => {
 
                             <div className='user-inner-cash'>
                                 <p>Balance: <span>${user.total_wallet_balance}</span></p>
+
+                                <div>
+                                    {isLoading[user.id] ? (
+                                        <CircularProgress color="inherit" size="20px" />
+                                    ) : <MdDelete onClick={() => deleteUser(user.id)} />}
+                                </div>
                             </div>
                         </div>
                     ))}
