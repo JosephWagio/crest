@@ -84,13 +84,13 @@ const AdminUsers = ({ handleCloseSidebar }) => {
         }));
 
         try {
-            let response = await fetch(`https://crestbackend.up.railway.app/api/user_profile/${userId}/`, {
+            let response = await fetch(`https://crestbackend.up.railway.app/api/users/${userId}/`, {
                 method: "DELETE",
             });
 
             const data = await response.json();
 
-            if (response.ok) {
+            if (response.status === 204 || response.status === 200) {
                 setShowAlert(true);
                 setAlertMessage("User Account Deleted Successfully");
                 setAlertSeverity("success");
@@ -186,7 +186,7 @@ const AdminUsers = ({ handleCloseSidebar }) => {
                                 <div>
                                     {isLoading[user.id] ? (
                                         <CircularProgress color="inherit" size="20px" />
-                                    ) : <MdDelete onClick={() => deleteUser(user.id)} />}
+                                    ) : <MdDelete onClick={() => deleteUser(user.user?.id)} />}
                                 </div>
                             </div>
                         </div>
